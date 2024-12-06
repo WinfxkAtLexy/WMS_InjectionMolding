@@ -1,0 +1,140 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:tip="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tip:zzgxb.asft620.createRequest>
+            <tip:request><![CDATA[<Request>
+                <Access>
+                    <Authentication user="" password=""/>
+                    <Connection application="" source=""/>
+                    <Organization name="KC04"/>                     --填ERP的法人编号 例如 KC04
+                    <Locale language="zh_cn"/>                      --language="zh_cn"
+                </Access>
+                <RequestContent>
+                    <Parameter>
+                        <Record>
+                            <Field name ="reqno" value="12345678" />                --请求编号
+                            <Field name ="reqtime" value="2024-11-14 9:37:51" />    --请求时间   yyyy-MM-dd HH:mm:ss
+                            <Field name ="reqclient" value="zzgxb" />               --请求来源   固定值 "zzgxb"
+                            <Field name ="reqtype" value="0" />                     --类型       固定值 '0'
+                        </Record>
+                    </Parameter>
+                    <Document>
+                        <RecordSet id="1" >
+                            <Master name="sfu_file">
+                                <Record>
+                                    <Field name ="sfu00" value="" />                      --varchar2(1)
+                                    <Field name ="sfu01" value="" />                      --varchar2(20)    单号
+                                    <Field name ="sfu02" value="" />                      --date          Y 入库日期 'YYYY-MM-DD'
+                                    <Field name ="sfu03" value="" />                      --varchar2(16)
+                                    <Field name ="sfu04" value="" />                      --varchar2(10)  Y 部门
+                                    <Field name ="sfu05" value="" />                      --varchar2(10)
+                                    <Field name ="sfu06" value="" />                      --varchar2(10)
+                                    <Field name ="sfu07" value="" />                      --varchar2(255) Y 备注
+                                    <Field name ="sfu08" value="" />                      --varchar2(20)
+                                    <Field name ="sfu09" value="" />                      --varchar2(20)
+                                    <Field name ="sfu10" value="" />                      --varchar2(1)
+                                    <Field name ="sfu11" value="" />                      --varchar2(1)
+                                    <Field name ="sfu12" value="" />                      --varchar2(1)
+                                    <Field name ="sfu13" value="" />                      --varchar2(1)
+                                    <Field name ="sfupost" value="" />                    --varchar2(1)
+                                    <Field name ="sfuuser" value="" />                    --varchar2(10)
+                                    <Field name ="sfugrup" value="" />                    --varchar2(10)
+                                    <Field name ="sfumodu" value="" />                    --varchar2(10)
+                                    <Field name ="sfudate" value="" />                    --date
+                                    <Field name ="sfuconf" value="" />                    --varchar2(1)
+                                    <Field name ="sfuud01" value="" />                    --varchar2(255)
+                                    <Field name ="sfuud02" value="" />                    --varchar2(40)
+                                    <Field name ="sfuud03" value="" />                    --varchar2(40)
+                                    <Field name ="sfuud04" value="" />                    --varchar2(40)
+                                    <Field name ="sfuud05" value="" />                    --varchar2(40)
+                                    <Field name ="sfuud06" value="" />                    --varchar2(40)
+                                    <Field name ="sfuud07" value="" />                    --number(15,3)
+                                    <Field name ="sfuud08" value="" />                    --number(15,3)
+                                    <Field name ="sfuud09" value="" />                    --number(15,3)
+                                    <Field name ="sfuud10" value="" />                    --number(10)
+                                    <Field name ="sfuud11" value="" />                    --number(10)
+                                    <Field name ="sfuud12" value="" />                    --number(10)
+                                    <Field name ="sfuud13" value="" />                    --date
+                                    <Field name ="sfuud14" value="" />                    --date
+                                    <Field name ="sfuud15" value="" />                    --date
+                                    <Field name ="sfu14" value="" />                      --date
+                                    <Field name ="sfuplant" value="" />                   --varchar2(10)
+                                    <Field name ="sfulegal" value="" />                   --varchar2(10)
+                                    <Field name ="sfuoriu" value="" />                    --varchar2(10)
+                                    <Field name ="sfuorig" value="" />                    --varchar2(10)
+                                    <Field name ="sfu15" value="" />                      --varchar2(1)
+                                    <Field name ="sfu16" value="" />                      --varchar2(10)    申请人
+                                    <Field name ="sfumksg" value="" />                    --varchar2(1)
+                                    <Field name ="sfucond" value="" />                    --date
+                                    <Field name ="sfucont" value="" />                    --varchar2(8)
+                                    <Field name ="ta_sfu01" value="" />                   --varchar2(20)    来源资料单号
+                                </Record>
+                            </Master>
+                            <Detail name="qct_file">
+                                <Record>
+                                    <Field name ="sfv01" value="" />                      --varchar2(20)
+                                    <Field name ="sfv03" value="" />                      --number(5)
+                                    <Field name ="sfv04" value="" />                      --varchar2(40)  Y 料
+                                    <Field name ="sfv05" value="" />                      --varchar2(10)  Y 仓
+                                    <Field name ="sfv06" value="" />                      --varchar2(40)  Y 储
+                                    <Field name ="sfv07" value="" />                      --varchar2(24)  Y 批
+                                    <Field name ="sfv08" value="" />                      --varchar2(4)   Y 单位
+                                    <Field name ="sfv09" value="" />                      --number(15,3)  Y 入库量
+                                    <Field name ="sfv11" value="" />                      --varchar2(40)  Y 工单号
+                                    <Field name ="sfv12" value="" />                      --varchar2(255)   备注
+                                    <Field name ="sfv13" value="" />                      --number(15,3)
+                                    <Field name ="sfv14" value="" />                      --number(5)
+                                    <Field name ="sfv15" value="" />                      --number(5)
+                                    <Field name ="sfv16" value="" />                      --varchar2(1)     是否入联产品
+                                    <Field name ="sfv17" value="" />                      --varchar2(20)    FQC单号
+                                    <Field name ="sfv18" value="" />                      --varchar2(1)
+                                    <Field name ="sfv19" value="" />                      --varchar2(1)
+                                    <Field name ="sfv20" value="" />                      --varchar2(23)
+                                    <Field name ="sfv30" value="" />                      --varchar2(4)
+                                    <Field name ="sfv31" value="" />                      --number(20,8)
+                                    <Field name ="sfv32" value="" />                      --number(15,3)
+                                    <Field name ="sfv33" value="" />                      --varchar2(4)
+                                    <Field name ="sfv34" value="" />                      --number(20,8)
+                                    <Field name ="sfv35" value="" />                      --number(15,3)
+                                    <Field name ="sfv930" value="" />                     --varchar2(10)
+                                    <Field name ="sfv41" value="" />                      --varchar2(10)
+                                    <Field name ="sfv42" value="" />                      --varchar2(30)
+                                    <Field name ="sfv43" value="" />                      --varchar2(4)
+                                    <Field name ="sfv44" value="" />                      --varchar2(10)
+                                    <Field name ="sfvud01" value="" />                    --varchar2(255)
+                                    <Field name ="sfvud02" value="" />                    --varchar2(40)
+                                    <Field name ="sfvud03" value="" />                    --varchar2(40)
+                                    <Field name ="sfvud04" value="" />                    --varchar2(40)
+                                    <Field name ="sfvud05" value="" />                    --varchar2(40)
+                                    <Field name ="sfvud06" value="" />                    --varchar2(40)
+                                    <Field name ="sfvud07" value="" />                    --number(15,3)
+                                    <Field name ="sfvud08" value="" />                    --number(15,3)
+                                    <Field name ="sfvud09" value="" />                    --number(15,3)
+                                    <Field name ="sfvud10" value="" />                    --number(10)
+                                    <Field name ="sfvud11" value="" />                    --number(10)
+                                    <Field name ="sfvud12" value="" />                    --number(10)
+                                    <Field name ="sfvud13" value="" />                    --date
+                                    <Field name ="sfvud14" value="" />                    --date
+                                    <Field name ="sfvud15" value="" />                    --date
+                                    <Field name ="sfvplant" value="" />                   --varchar2(10)
+                                    <Field name ="sfvlegal" value="" />                   --varchar2(10)
+                                    <Field name ="sfv45" value="" />                      --varchar2(20)
+                                    <Field name ="sfv46" value="" />                      --varchar2(10)
+                                    <Field name ="sfv47" value="" />                      --number(5)
+                                    <Field name ="ta_sfv01" value="" />                   --varchar2(20)    订单号
+                                    <Field name ="ta_sfv02" value="" />                   --number(5)       订单项次
+                                </Record>
+                                <Record>        --如果有第二行，则加第二个Record标签
+                                </Record>
+                            </Detail>
+                        </RecordSet>
+                        <RecordSet id="2" >                 --如果有第二个,则加第二个RecordSet标签
+                        </RecordSet>
+                    </Document>
+                </RequestContent>
+              </Request>]]></tip:request>
+        </tip:zzgxb.asft620.createRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

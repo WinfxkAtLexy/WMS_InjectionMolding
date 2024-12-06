@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="alibaba.fastjson" type="repository">
+    <properties maven-id="com.alibaba:fastjson:2.0.53" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/2.0.53/fastjson-2.0.53.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson2/fastjson2-extension/2.0.53/fastjson2-extension-2.0.53.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson2/fastjson2/2.0.53/fastjson2-2.0.53.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/2.0.53/fastjson-2.0.53-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson2/fastjson2-extension/2.0.53/fastjson2-extension-2.0.53-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson2/fastjson2/2.0.53/fastjson2-2.0.53-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/2.0.53/fastjson-2.0.53-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson2/fastjson2-extension/2.0.53/fastjson2-extension-2.0.53-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson2/fastjson2/2.0.53/fastjson2-2.0.53-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

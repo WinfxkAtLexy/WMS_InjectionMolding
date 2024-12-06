@@ -1,0 +1,15 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Body>
+        <fjs1:zzgxb.asft620.createResponse xmlns:fjs1="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+            <fjs1:response><![CDATA[<Response>
+                <Execution>
+                    <Status code="-1" sqlcode="" description=""/>
+                </Execution>
+                <ResponseContent>
+                    <Parameter/>
+                    <Document/>
+                </ResponseContent>
+            </Response>]]></fjs1:response>
+        </fjs1:zzgxb.asft620.createResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

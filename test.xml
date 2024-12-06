@@ -1,0 +1,50 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:tip="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tip:zzgxb.asft620.createRequest>
+            <tip:request><![CDATA[
+            <Request>
+                <Access>
+                    <Authentication user="" password=""/>
+                    <Connection application="" source=""/>
+                    <Organization name="KC04"/>      <!--账套  法人编号-->
+                    <Locale language="zh_cn"/>
+                </Access>
+                <RequestContent>
+                    <Parameter>
+                        <Record>
+                            <Field name ="reqno" value="12345678" />
+                            <Field name ="reqtime" value="2024-12-02 10:36:01" />
+                            <Field name ="reqclient" value="zzgxb" />
+                            <Field name ="reqtype" value="0" />
+                        </Record>
+                    </Parameter>
+                    <Document>
+                        <RecordSet id="1" >
+                            <Master name="sfu_file">
+                                <Record>
+                                <Field name ="sfu02" value="2024-11-16" />
+<Field name ="sfu04" value="5704" />
+<Field name ="sfu07" value="570052" />
+<Field name ="sfu16" value="kcl0047" />
+                                </Record>
+                            </Master>
+                            <Detail name="sfv_file">
+                                <Record>
+                                <Field name ="sfv04" value="H20018890T8" />
+<Field name ="sfv05" value="1014" />
+<Field name ="sfv06" value="C" />
+<Field name ="sfv08" value="PCS" />
+<Field name ="sfv09" value="1.000" />
+<Field name ="sfv11" value="61900-230100007" />
+<Field name ="sfv12" value="570052" />
+                                </Record>
+                            </Detail>
+                        </RecordSet>
+                    </Document>
+                </RequestContent>
+              </Request>]]></tip:request>
+        </tip:zzgxb.asft620.createRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
