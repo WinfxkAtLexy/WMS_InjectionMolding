@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>LiHua_Bma05_UpdateRequest_LiHua_Bma05_UpdateRequest complex typeµÄ Java Àà¡£
+ * <p>mom.asft620.createResponse_mom.asft620.createResponse complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
- * &lt;complexType name="LiHua_Bma05_UpdateRequest_LiHua_Bma05_UpdateRequest">
+ * &lt;complexType name="mom.asft620.createResponse_mom.asft620.createResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="request" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="response" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,36 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LiHua_Bma05_UpdateRequest_LiHua_Bma05_UpdateRequest", propOrder = {
-    "request"
+@XmlType(name = "mom.asft620.createResponse_mom.asft620.createResponse", propOrder = {
+    "response"
 })
-public class LiHuaBma05UpdateRequestLiHuaBma05UpdateRequest {
+public class MomAsft620CreateResponseMomAsft620CreateResponse {
 
     @XmlElement(required = true, nillable = true)
-    protected String request;
+    protected String response;
 
     /**
-     * »ñÈ¡requestÊôĞÔµÄÖµ¡£
+     * è·å–responseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getRequest() {
-        return request;
+    public String getResponse() {
+        return response;
     }
 
     /**
-     * ÉèÖÃrequestÊôĞÔµÄÖµ¡£
+     * è®¾ç½®responseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setRequest(String value) {
-        this.request = value;
+    public void setResponse(String value) {
+        this.response = value;
     }
 
 }

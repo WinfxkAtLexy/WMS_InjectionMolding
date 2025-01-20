@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>scm.cxmt634.confirmRequest_scm.cxmt634.confirmRequest complex typeµÄ Java Àà¡£
+ * <p>scm.cxmt634.confirmRequest_scm.cxmt634.confirmRequest complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="scm.cxmt634.confirmRequest_scm.cxmt634.confirmRequest">
@@ -36,7 +36,7 @@ public class ScmCxmt634ConfirmRequestScmCxmt634ConfirmRequest {
     protected String request;
 
     /**
-     * »ñÈ¡requestÊôĞÔµÄÖµ¡£
+     * è·å–requestå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class ScmCxmt634ConfirmRequestScmCxmt634ConfirmRequest {
     }
 
     /**
-     * ÉèÖÃrequestÊôĞÔµÄÖµ¡£
+     * è®¾ç½®requestå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

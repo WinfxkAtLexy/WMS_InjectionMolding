@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>mom.aqct410.createRequest_mom.aqct410.createRequest complex typeµÄ Java Àà¡£
+ * <p>mom.aqct410.createRequest_mom.aqct410.createRequest complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="mom.aqct410.createRequest_mom.aqct410.createRequest">
@@ -36,7 +36,7 @@ public class MomAqct410CreateRequestMomAqct410CreateRequest {
     protected String request;
 
     /**
-     * »ñÈ¡requestÊôĞÔµÄÖµ¡£
+     * è·å–requestå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class MomAqct410CreateRequestMomAqct410CreateRequest {
     }
 
     /**
-     * ÉèÖÃrequestÊôĞÔµÄÖµ¡£
+     * è®¾ç½®requestå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

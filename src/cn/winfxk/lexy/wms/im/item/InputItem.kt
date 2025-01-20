@@ -18,7 +18,14 @@ package cn.winfxk.lexy.wms.im.item
 import cn.winfxk.lexy.wms.im.client.release.TIPTOPServiceGateWay
 import cn.winfxk.lexy.wms.im.client.release.ZzgxbAsft620CreateRequestZzgxbAsft620CreateRequest
 import cn.winfxk.libk.log.Log
+import cn.winfxk.libk.tool.Tool
+import cn.winfxk.libk.tool.utils.write
 import com.alibaba.fastjson.JSONObject
+import java.io.File
+import java.io.PrintWriter
+import java.io.StringWriter
+import java.text.SimpleDateFormat
+import java.util.*
 
 class InputItem {
     companion object {
@@ -32,6 +39,7 @@ class InputItem {
         fun sendMessage(string: String): Response = sendMessage(string.toJson())
         @JvmStatic
         fun sendMessage(json: JSONObject): Response {
+            val im_po = json["im_po"];
             val sfu02 = json["sfu02"];
             if (sfu02.isNotExist()) return getErrorMessage("入库时间[sfu02]不能为空！")
             val sfu04 = json["sfu04"];
@@ -43,6 +51,7 @@ class InputItem {
             <Field name ="sfu04" value="$sfu04" />
             <Field name ="sfu07" value="$sfu07" />
             <Field name ="sfu16" value="${json["sfu16"]}" />
+            <Field name ="sfu10" value="1" />
         """.trimIndent();
             val sfv04 = json["sfv04"];
             if (sfv04.isNotExist()) return getErrorMessage("字段[sfv04]不能为空！")
@@ -70,18 +79,35 @@ class InputItem {
             <Field name ="sfv12" value="$sfv12" />
         """.trimIndent()
             val xml = Xmlstring.getXml("$kc", sfu_file, sfv_file);
-            return port.zzgxbAsft620Create(ZzgxbAsft620CreateRequestZzgxbAsft620CreateRequest().also { it.request = xml })?.let {
-                it.response?.let { aa ->
-                    val ret = Response(aa, xml);
-                    ret.sfu16 = json["sfu16"]?.toString();
-                    ret.fac = sfu04?.toString()
-                    if (! ret.isSuccess()) {
-                        log.i("提交到ERP失败！正在保存日志..")
-                        PostLog(ret).post();
-                    } else log.i("提交到ERP成功！")
-                    ret;
-                }
-            } ?: getErrorMessage("ERP返回了空数据！")
+            try {
+                return port.zzgxbAsft620Create(ZzgxbAsft620CreateRequestZzgxbAsft620CreateRequest().also { it.request = xml })?.let {
+                    it.response?.let { aa ->
+                        val ret = Response(aa, xml);
+                        ret.sfu16 = json["sfu16"]?.toString();
+                        ret.fac = sfu04?.toString()
+                        if (! ret.isSuccess()) {
+                            log.i("提交到ERP失败！正在保存日志..")
+                            PostLog(ret).post();
+                        } else log.i("提交到ERP成功！")
+                        ret;
+                    }
+                } ?: getErrorMessage("ERP返回了空数据！")
+            } catch (e: Exception) {
+                val log = PostLog();
+                log.IPC = UUID.randomUUID().toString();
+                log.SYS_C = "WMS";
+                log.ITEM_C = "SIMFSH_Magt_entery_chk_fshentry_frm";
+                log.ITEM_N = "注塑件收货";
+                log.STATE = "NG";
+                log.CONTEXT = xml;
+                log.RESULT = StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString()
+                log.MARK = e.message;
+                log.CNAME = json["sfu16"]?.toString();
+                log.FAC_C = json["sfu04"]?.toString();
+                log.MCODE = "1001";
+                log.post()
+                return getErrorMessage("接口运行异常！");
+            }
         }
 
         private fun Any?.isNotExist(): Boolean {
@@ -110,24 +136,27 @@ class InputItem {
 }
 
 fun main() {
-    var start = System.currentTimeMillis();
-    start = System.currentTimeMillis();
+    val date = Date();
+    val file = File("正式区/${Tool.CompressNumber(date.time)}");
+    if (! file.exists() || ! file.isDirectory) file.mkdirs();
     println(InputItem.sendMessage("""
             {
-              "sfu02": "2024-12-04",
+              "sfu02": "${SimpleDateFormat("yyyy-MM-dd").format(date)}",
               "sfu04": "5704",
-              "sfv04": "A0X96140001R",
+              "sfv04": "Q04AB78AAE3",
               "sfu16": "kcl0047",
-              "sfv11": "61900-230100007",
+              "sfv11": "61900-210400145",
               "sfv09": "1.000",
               "sfv05": "1013",
               "sfv06": "C",
               "sfu07": "570052",
               "sfv08": "PCS",
               "sfv12": "570052",
-              "kc": "KC04"
+              "kc": "KC24"
             }
-        """.trimIndent()).isSuccess())
-    println(System.currentTimeMillis() - start)
+        """.trimIndent()).also {
+        println(it.getRequest().also { a -> File(file, "请求.xml").write(a ?: "") })
+        println(it.backtrack().also { a -> File(file, "报文.xml").write(a) })
+    }.isSuccess())
     Thread.sleep(10000)
 }

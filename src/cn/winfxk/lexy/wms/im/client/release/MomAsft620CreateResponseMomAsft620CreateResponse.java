@@ -1,5 +1,5 @@
 
-package cn.winfxk.lexy.wms.im.client.test;
+package cn.winfxk.lexy.wms.im.client.release;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>LiHua_Order_UpdateResponse_LiHua_Order_UpdateResponse complex typeµÄ Java Àà¡£
+ * <p>mom.asft620.createResponse_mom.asft620.createResponse complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
- * &lt;complexType name="LiHua_Order_UpdateResponse_LiHua_Order_UpdateResponse">
+ * &lt;complexType name="mom.asft620.createResponse_mom.asft620.createResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,16 +27,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LiHua_Order_UpdateResponse_LiHua_Order_UpdateResponse", propOrder = {
+@XmlType(name = "mom.asft620.createResponse_mom.asft620.createResponse", propOrder = {
     "response"
 })
-public class LiHuaOrderUpdateResponseLiHuaOrderUpdateResponse {
+public class MomAsft620CreateResponseMomAsft620CreateResponse {
 
     @XmlElement(required = true, nillable = true)
     protected String response;
 
     /**
-     * »ñÈ¡responseÊôĞÔµÄÖµ¡£
+     * è·å–responseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class LiHuaOrderUpdateResponseLiHuaOrderUpdateResponse {
     }
 
     /**
-     * ÉèÖÃresponseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®responseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

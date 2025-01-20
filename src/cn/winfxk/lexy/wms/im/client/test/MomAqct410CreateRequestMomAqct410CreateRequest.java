@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>LiHua_Order_UpdateRequest_LiHua_Order_UpdateRequest complex typeµÄ Java Àà¡£
+ * <p>mom.aqct410.createRequest_mom.aqct410.createRequest complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
- * &lt;complexType name="LiHua_Order_UpdateRequest_LiHua_Order_UpdateRequest">
+ * &lt;complexType name="mom.aqct410.createRequest_mom.aqct410.createRequest">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,16 +27,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LiHua_Order_UpdateRequest_LiHua_Order_UpdateRequest", propOrder = {
+@XmlType(name = "mom.aqct410.createRequest_mom.aqct410.createRequest", propOrder = {
     "request"
 })
-public class LiHuaOrderUpdateRequestLiHuaOrderUpdateRequest {
+public class MomAqct410CreateRequestMomAqct410CreateRequest {
 
     @XmlElement(required = true, nillable = true)
     protected String request;
 
     /**
-     * »ñÈ¡requestÊôĞÔµÄÖµ¡£
+     * è·å–requestå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class LiHuaOrderUpdateRequestLiHuaOrderUpdateRequest {
     }
 
     /**
-     * ÉèÖÃrequestÊôĞÔµÄÖµ¡£
+     * è®¾ç½®requestå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

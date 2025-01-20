@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>xny.warehouse.transfer.createResponse_xny.warehouse.transfer.createResponse complex typeµÄ Java Àà¡£
+ * <p>xny.warehouse.transfer.createResponse_xny.warehouse.transfer.createResponse complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="xny.warehouse.transfer.createResponse_xny.warehouse.transfer.createResponse">
@@ -36,7 +36,7 @@ public class XnyWarehouseTransferCreateResponseXnyWarehouseTransferCreateRespons
     protected String response;
 
     /**
-     * »ñÈ¡responseÊôĞÔµÄÖµ¡£
+     * è·å–responseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class XnyWarehouseTransferCreateResponseXnyWarehouseTransferCreateRespons
     }
 
     /**
-     * ÉèÖÃresponseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®responseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

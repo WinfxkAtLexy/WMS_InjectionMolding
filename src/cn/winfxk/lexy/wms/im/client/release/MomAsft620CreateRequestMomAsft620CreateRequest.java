@@ -1,5 +1,5 @@
 
-package cn.winfxk.lexy.wms.im.client.test;
+package cn.winfxk.lexy.wms.im.client.release;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>LiHua_Order_CreateRequest_LiHua_Order_CreateRequest complex typeµÄ Java Àà¡£
+ * <p>mom.asft620.createRequest_mom.asft620.createRequest complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
- * &lt;complexType name="LiHua_Order_CreateRequest_LiHua_Order_CreateRequest">
+ * &lt;complexType name="mom.asft620.createRequest_mom.asft620.createRequest">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,16 +27,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LiHua_Order_CreateRequest_LiHua_Order_CreateRequest", propOrder = {
+@XmlType(name = "mom.asft620.createRequest_mom.asft620.createRequest", propOrder = {
     "request"
 })
-public class LiHuaOrderCreateRequestLiHuaOrderCreateRequest {
+public class MomAsft620CreateRequestMomAsft620CreateRequest {
 
     @XmlElement(required = true, nillable = true)
     protected String request;
 
     /**
-     * »ñÈ¡requestÊôĞÔµÄÖµ¡£
+     * è·å–requestå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class LiHuaOrderCreateRequestLiHuaOrderCreateRequest {
     }
 
     /**
-     * ÉèÖÃrequestÊôĞÔµÄÖµ¡£
+     * è®¾ç½®requestå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

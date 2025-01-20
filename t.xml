@@ -2,14 +2,14 @@
     <Access>
         <Authentication user="" password=""/>
         <Connection application="" source=""/>
-        <Organization name="KC04"/>      <!--账套  法人编号-->
+        <Organization name="KC24"/>      <!--账套  法人编号-->
         <Locale language="zh_cn"/>
     </Access>
     <RequestContent>
         <Parameter>
             <Record>
-                <Field name="reqno" value="12345678"/>
-                <Field name="reqtime" value="2024-11-23 11:28:35"/>
+                <Field name="reqno" value="cG6xhd--2keV"/>
+                <Field name="reqtime" value="2024-12-27 14:07:14"/>
                 <Field name="reqclient" value="zzgxb"/>
                 <Field name="reqtype" value="0"/>
             </Record>
@@ -18,24 +18,25 @@
             <RecordSet id="1">
                 <Master name="sfu_file">
                     <Record>
-                        <Field name="sfu02" value="2024-11-19"/>
-                        <Field name="sfu04" value="5704"/>
-                        <Field name="sfu07" value="30"/>
-                        <Field name="sfu16" value="kcl0047"/>
+                        <Field name="sfu02" value="2024-12-27"/>
+                        <Field name="sfu04" value="5700"/>
+                        <Field name="sfu07" value="80"/>
+                        <Field name="sfu16" value="kc01178"/>
                     </Record>
                 </Master>
                 <Detail name="sfv_file">
                     <Record>
-                        <Field name="sfv04" value="A0X96140001R"/>
-                        <Field name="sfv05" value="1014"/>
-                        <Field name="sfv06" value="C"/>
-                        <Field name="sfv08" value="PCS"/>
-                        <Field name="sfv09" value="450.000"/>
-                        <Field name="sfv11" value="61900-230100007"/>
-                        <Field name="sfv12" value="570052"/>
+                        <Field name="sfv04" value="Q13N2910967"/>
+                        <Field name="sfv05" value="1013"/>
+                        <Field name="sfv06" value="M"/>
+                        <Field name="sfv08" value="null"/>
+                        <Field name="sfv09" value="42"/>
+                        <Field name="sfv11" value="61900-241001711"/>
+                        <Field name="sfv12" value="570080"/>
                     </Record>
                 </Detail>
             </RecordSet>
         </Document>
     </RequestContent>
 </Request>
+        

@@ -147,6 +147,18 @@ public interface TIPTOPServiceGateWayPortType {
      * 
      * @param parameters
      * @return
+     *     returns cn.winfxk.lexy.wms.im.client.release.MomAsft620CreateResponseMomAsft620CreateResponse
+     */
+    @WebMethod(operationName = "mom.asft620.create")
+    @WebResult(name = "mom.asft620.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public MomAsft620CreateResponseMomAsft620CreateResponse momAsft620Create(
+        @WebParam(name = "mom.asft620.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        MomAsft620CreateRequestMomAsft620CreateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
      *     returns cn.winfxk.lexy.wms.im.client.release.MomAqct110CreateResponseMomAqct110CreateResponse
      */
     @WebMethod(operationName = "mom.aqct110.create")

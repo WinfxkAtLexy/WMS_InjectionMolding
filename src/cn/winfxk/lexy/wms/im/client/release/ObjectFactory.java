@@ -34,6 +34,7 @@ public class ObjectFactory {
     private final static QName _ScmCxmt634ConfirmRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "scm.cxmt634.confirmRequest");
     private final static QName _MomAqct110CreateResponse_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "mom.aqct110.createResponse");
     private final static QName _StmsDeliveryorderGetResponse_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "stms.deliveryorder.getResponse");
+    private final static QName _MomAsft620CreateResponse_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "mom.asft620.createResponse");
     private final static QName _MomAqct410CreateRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "mom.aqct410.createRequest");
     private final static QName _LiHuaMiscellaneousResponse_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "LiHua_MiscellaneousResponse");
     private final static QName _LiHuaMiscellaneousRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "LiHua_MiscellaneousRequest");
@@ -45,6 +46,7 @@ public class ObjectFactory {
     private final static QName _MomAqct410CreateResponse_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "mom.aqct410.createResponse");
     private final static QName _MomAqct110CreateRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "mom.aqct110.createRequest");
     private final static QName _StmsDeliveryorderGetRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "stms.deliveryorder.getRequest");
+    private final static QName _MomAsft620CreateRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "mom.asft620.createRequest");
     private final static QName _XnyOrderDeliveryCreateRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "xny.order.delivery.createRequest");
     private final static QName _ZzgxbAsft620CreateResponse_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "zzgxb.asft620.createResponse");
     private final static QName _XnyWarehouseMiscellaneousCreateRequest_QNAME = new QName("http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", "xny.warehouse.miscellaneous.createRequest");
@@ -201,6 +203,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link MomAsft620CreateResponseMomAsft620CreateResponse }
+     * 
+     */
+    public MomAsft620CreateResponseMomAsft620CreateResponse createMomAsft620CreateResponseMomAsft620CreateResponse() {
+        return new MomAsft620CreateResponseMomAsft620CreateResponse();
+    }
+
+    /**
      * Create an instance of {@link MomAqct110CreateRequestMomAqct110CreateRequest }
      * 
      */
@@ -214,6 +224,14 @@ public class ObjectFactory {
      */
     public StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest createStmsDeliveryorderGetRequestStmsDeliveryorderGetRequest() {
         return new StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest();
+    }
+
+    /**
+     * Create an instance of {@link MomAsft620CreateRequestMomAsft620CreateRequest }
+     * 
+     */
+    public MomAsft620CreateRequestMomAsft620CreateRequest createMomAsft620CreateRequestMomAsft620CreateRequest() {
+        return new MomAsft620CreateRequestMomAsft620CreateRequest();
     }
 
     /**
@@ -411,6 +429,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MomAsft620CreateResponseMomAsft620CreateResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", name = "mom.asft620.createResponse")
+    public JAXBElement<MomAsft620CreateResponseMomAsft620CreateResponse> createMomAsft620CreateResponse(MomAsft620CreateResponseMomAsft620CreateResponse value) {
+        return new JAXBElement<MomAsft620CreateResponseMomAsft620CreateResponse>(_MomAsft620CreateResponse_QNAME, MomAsft620CreateResponseMomAsft620CreateResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link MomAqct410CreateRequestMomAqct410CreateRequest }{@code >}}
      * 
      */
@@ -507,6 +534,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", name = "stms.deliveryorder.getRequest")
     public JAXBElement<StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest> createStmsDeliveryorderGetRequest(StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest value) {
         return new JAXBElement<StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest>(_StmsDeliveryorderGetRequest_QNAME, StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MomAsft620CreateRequestMomAsft620CreateRequest }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", name = "mom.asft620.createRequest")
+    public JAXBElement<MomAsft620CreateRequestMomAsft620CreateRequest> createMomAsft620CreateRequest(MomAsft620CreateRequestMomAsft620CreateRequest value) {
+        return new JAXBElement<MomAsft620CreateRequestMomAsft620CreateRequest>(_MomAsft620CreateRequest_QNAME, MomAsft620CreateRequestMomAsft620CreateRequest.class, null, value);
     }
 
     /**

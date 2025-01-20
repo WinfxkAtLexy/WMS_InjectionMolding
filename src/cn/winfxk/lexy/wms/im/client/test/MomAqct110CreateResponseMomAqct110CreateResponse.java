@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>mom.aqct110.createResponse_mom.aqct110.createResponse complex typeµÄ Java Àà¡£
+ * <p>mom.aqct110.createResponse_mom.aqct110.createResponse complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="mom.aqct110.createResponse_mom.aqct110.createResponse">
@@ -36,7 +36,7 @@ public class MomAqct110CreateResponseMomAqct110CreateResponse {
     protected String response;
 
     /**
-     * »ñÈ¡responseÊôĞÔµÄÖµ¡£
+     * è·å–responseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class MomAqct110CreateResponseMomAqct110CreateResponse {
     }
 
     /**
-     * ÉèÖÃresponseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®responseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

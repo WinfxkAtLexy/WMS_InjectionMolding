@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>LiHua_InvoiceCreateResponse_LiHua_InvoiceCreateResponse complex typeµÄ Java Àà¡£
+ * <p>mom.aqct410.createResponse_mom.aqct410.createResponse complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
- * &lt;complexType name="LiHua_InvoiceCreateResponse_LiHua_InvoiceCreateResponse">
+ * &lt;complexType name="mom.aqct410.createResponse_mom.aqct410.createResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,16 +27,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LiHua_InvoiceCreateResponse_LiHua_InvoiceCreateResponse", propOrder = {
+@XmlType(name = "mom.aqct410.createResponse_mom.aqct410.createResponse", propOrder = {
     "response"
 })
-public class LiHuaInvoiceCreateResponseLiHuaInvoiceCreateResponse {
+public class MomAqct410CreateResponseMomAqct410CreateResponse {
 
     @XmlElement(required = true, nillable = true)
     protected String response;
 
     /**
-     * »ñÈ¡responseÊôĞÔµÄÖµ¡£
+     * è·å–responseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class LiHuaInvoiceCreateResponseLiHuaInvoiceCreateResponse {
     }
 
     /**
-     * ÉèÖÃresponseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®responseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

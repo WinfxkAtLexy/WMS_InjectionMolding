@@ -1,0 +1,641 @@
+测试地址：http://192.168.0.6:8902/?wsdl
+正式地址：http://192.168.0.165/web/ws/r/aws_ttsrv4?wsdl
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:tip="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tip:zzgxb.axmt620.createRequest>
+            <tip:request><![CDATA[<Request>
+                <Access>
+                    <Authentication user="" password=""/>
+                    <Connection application="" source=""/>          
+                    <Organization name="KC04"/>                     --填ERP的法人编号 例如 KC04
+                    <Locale language="zh_cn"/>                      --language="zh_cn"
+                </Access>
+                <RequestContent>
+                    <Parameter>
+                        <Record>
+                            <Field name ="reqno" value="12345678" />                --请求编号
+                            <Field name ="reqtime" value="2024-11-14 9:37:51" />    --请求时间   yyyy-MM-dd HH:mm:ss
+                            <Field name ="reqclient" value="zzgxb" />               --请求来源   固定值 "zzgxb"
+                            <Field name ="reqtype" value="0" />                     --类型       固定值 '0'
+                        </Record>
+                    </Parameter>
+                    <Document>
+                        <RecordSet id="1" >
+                            <Master name="oga_file">
+                                <Record>
+                                    <Field name ="oga00" value="" />    --不用传
+                                    <Field name ="oga01" value="" />    --不用传，响应报文返回
+                                    <Field name ="oga011" value="" />
+                                    <Field name ="oga02" value="" />
+                                    <Field name ="oga021" value="" />
+                                    <Field name ="oga022" value="" />
+                                    <Field name ="oga03" value="" />
+                                    <Field name ="oga032" value="" />
+                                    <Field name ="oga033" value="" />
+                                    <Field name ="oga04" value="" />
+                                    <Field name ="oga044" value="" />
+                                    <Field name ="oga05" value="" />
+                                    <Field name ="oga06" value="" /> 
+                                    <Field name ="oga07" value="" /> 
+                                    <Field name ="oga08" value="" /> 
+                                    <Field name ="oga09" value="" /> 
+                                    <Field name ="oga10" value="" /> 
+                                    <Field name ="oga11" value="" /> 
+                                    <Field name ="oga12" value="" /> 
+                                    <Field name ="oga13" value="" />
+                                    <Field name ="oga14" value="" />
+                                    <Field name ="oga15" value="" />
+                                    <Field name ="oga16" value="" />
+                                    <Field name ="oga161" value="" />
+                                    <Field name ="oga162" value="" />
+                                    <Field name ="oga163" value="" />
+                                    <Field name ="oga17" value="" />
+                                    <Field name ="oga18" value="" />
+                                    <Field name ="oga19" value="" />
+                                    <Field name ="oga20" value="" /> 
+                                    <Field name ="oga21" value="" /> 
+                                    <Field name ="oga211" value="" />
+                                    <Field name ="oga212" value="" />
+                                    <Field name ="oga213" value="" />
+                                    <Field name ="oga23" value="" />
+                                    <Field name ="oga24" value="" />
+                                    <Field name ="oga25" value="" />
+                                    <Field name ="oga26" value="" />
+                                    <Field name ="oga27" value="" />
+                                    <Field name ="oga28" value="" />
+                                    <Field name ="oga29" value="" />
+                                    <Field name ="oga30" value="" />
+                                    <Field name ="oga31" value="" />
+                                    <Field name ="oga32" value="" />
+                                    <Field name ="oga33" value="" />
+                                    <Field name ="oga34" value="" />
+                                    <Field name ="oga35" value="" />
+                                    <Field name ="oga36" value="" />
+                                    <Field name ="oga37" value="" />
+                                    <Field name ="oga38" value="" />
+                                    <Field name ="oga39" value="" />
+                                    <Field name ="oga40" value="" />
+                                    <Field name ="oga41" value="" />
+                                    <Field name ="oga42" value="" />
+                                    <Field name ="oga43" value="" />
+                                    <Field name ="oga44" value="" />
+                                    <Field name ="oga45" value="" />
+                                    <Field name ="oga46" value="" />
+                                    <Field name ="oga47" value="" />
+                                    <Field name ="oga48" value="" />
+                                    <Field name ="oga49" value="" />
+                                    <Field name ="oga50" value="" />
+                                    <Field name ="oga501" value="" />
+                                    <Field name ="oga51" value="" />
+                                    <Field name ="oga511" value="" />
+                                    <Field name ="oga52" value="" />
+                                    <Field name ="oga53" value="" />
+                                    <Field name ="oga54" value="" />
+                                    <Field name ="oga99" value="" />
+                                    <Field name ="oga901" value="" />
+                                    <Field name ="oga902" value="" />
+                                    <Field name ="oga903" value="" />
+                                    <Field name ="oga904" value="" />
+                                    <Field name ="oga905" value="" />
+                                    <Field name ="oga906" value="" />
+                                    <Field name ="oga907" value="" />
+                                    <Field name ="oga908" value="" />
+                                    <Field name ="oga909" value="" />
+                                    <Field name ="oga910" value="" />
+                                    <Field name ="oga911" value="" />
+                                    <Field name ="ogaconf" value="" />
+                                    <Field name ="ogapost" value="" />
+                                    <Field name ="ogaprsw" value="" />
+                                    <Field name ="ogauser" value="" />
+                                    <Field name ="ogagrup" value="" />
+                                    <Field name ="ogamodu" value="" />
+                                    <Field name ="ogadate" value="" />
+                                    <Field name ="oga55" value="" />
+                                    <Field name ="ogamksg" value="" />
+                                    <Field name ="oga65" value="" />
+                                    <Field name ="oga66" value="" />
+                                    <Field name ="oga67" value="" />
+                                    <Field name ="oga1001" value="" />
+                                    <Field name ="oga1002" value="" />
+                                    <Field name ="oga1003" value="" />
+                                    <Field name ="oga1004" value="" />
+                                    <Field name ="oga1005" value="" />
+                                    <Field name ="oga1006" value="" />
+                                    <Field name ="oga1007" value="" />
+                                    <Field name ="oga1008" value="" />
+                                    <Field name ="oga1009" value="" />
+                                    <Field name ="oga1010" value="" />
+                                    <Field name ="oga1011" value="" />
+                                    <Field name ="oga1012" value="" />
+                                    <Field name ="oga1013" value="" />
+                                    <Field name ="oga1014" value="" />
+                                    <Field name ="oga1015" value="" />
+                                    <Field name ="oga1016" value="" />
+                                    <Field name ="oga68" value="" />
+                                    <Field name ="ogaspc" value="" />
+                                    <Field name ="oga69" value="" />
+                                    <Field name ="oga912" value="" />
+                                    <Field name ="oga913" value="" />
+                                    <Field name ="oga914" value="" />
+                                    <Field name ="oga70" value="" />
+                                    <Field name ="ogaud01" value="" />
+                                    <Field name ="ogaud02" value="" />
+                                    <Field name ="ogaud03" value="" />
+                                    <Field name ="ogaud04" value="" />
+                                    <Field name ="ogaud05" value="" />
+                                    <Field name ="ogaud06" value="" />
+                                    <Field name ="ogaud07" value="" />
+                                    <Field name ="ogaud08" value="" />
+                                    <Field name ="ogaud09" value="" />
+                                    <Field name ="ogaud10" value="" />
+                                    <Field name ="ogaud11" value="" />
+                                    <Field name ="ogaud12" value="" />
+                                    <Field name ="ogaud13" value="" />
+                                    <Field name ="ogaud14" value="" />
+                                    <Field name ="ogaud15" value="" />
+                                    <Field name ="oga83" value="" />
+                                    <Field name ="oga84" value="" />
+                                    <Field name ="oga85" value="" />
+                                    <Field name ="oga86" value="" />
+                                    <Field name ="oga87" value="" />
+                                    <Field name ="oga88" value="" />
+                                    <Field name ="oga89" value="" />
+                                    <Field name ="oga90" value="" />
+                                    <Field name ="oga91" value="" />
+                                    <Field name ="oga92" value="" />
+                                    <Field name ="oga93" value="" />
+                                    <Field name ="oga94" value="" />
+                                    <Field name ="oga95" value="" />
+                                    <Field name ="oga96" value="" />
+                                    <Field name ="oga97" value="" />
+                                    <Field name ="ogacond" value="" />
+                                    <Field name ="ogaconu" value="" />
+                                    <Field name ="ogaplant" value="" />
+                                    <Field name ="ogalegal" value="" />
+                                    <Field name ="oga71" value="" /> 
+                                    <Field name ="ogaoriu" value="" />
+                                    <Field name ="ogaorig" value="" />
+                                    <Field name ="ogacont" value="" />
+                                    <Field name ="oga98" value="" />
+                                    <Field name ="oga72" value="" />
+                                    <Field name ="oga57" value="" />
+                                    <Field name ="ogaslk01" value="" />
+                                    <Field name ="ogaslk02" value="" />
+                                    <Field name ="oga56" value="" />
+                                    <Field name ="ta_oga01" value="" />
+                                    <Field name ="ta_oga02" value="" />
+                                    <Field name ="ta_oga03" value="" />
+                                    <Field name ="ta_oga04" value="" />
+                                    <Field name ="ta_oga05" value="" />
+                                    <Field name ="ta_oga06" value="" />
+                                    <Field name ="ta_oga07" value="" />
+                                    <Field name ="ta_oga08" value="" />
+                                    <Field name ="ta_oga09" value="" />
+                                    <Field name ="ta_oga10" value="" />
+                                    <Field name ="ta_oga11" value="" />
+                                </Record>
+                            </Master>
+                            <Detail name="ogb_file">
+                                <Record>
+                                    <Field name ="ogb01" value="" />
+                                    <Field name ="ogb03" value="" />                         
+                                    <Field name ="ogb04" value="" />     
+                                    <Field name ="ogb05" value="" />     
+                                    <Field name ="ogb05_fac" value="" /> 
+                                    <Field name ="ogb06" value="" />
+                                    <Field name ="ogb07" value="" />
+                                    <Field name ="ogb08" value="" />
+                                    <Field name ="ogb09" value="" />
+                                    <Field name ="ogb091" value="" />
+                                    <Field name ="ogb092" value="" />
+                                    <Field name ="ogb11" value="" />
+                                    <Field name ="ogb12" value="" />
+                                    <Field name ="ogb13" value="" />
+                                    <Field name ="ogb14" value="" />
+                                    <Field name ="ogb14t" value="" />
+                                    <Field name ="ogb15" value="" />
+                                    <Field name ="ogb15_fac" value="" />
+                                    <Field name ="ogb16" value="" />   
+                                    <Field name ="ogb17" value="" />     
+                                    <Field name ="ogb18" value="" />
+                                    <Field name ="ogb19" value="" />  
+                                    <Field name ="ogb20" value="" />  
+                                    <Field name ="ogb21" value="" />  
+                                    <Field name ="ogb22" value="" />  
+                                    <Field name ="ogb31" value="" />  
+                                    <Field name ="ogb32" value="" />  
+                                    <Field name ="ogb60" value="" />  
+                                    <Field name ="ogb63" value="" />  
+                                    <Field name ="ogb64" value="" />  
+                                    <Field name ="ogb901" value="" /> 
+                                    <Field name ="ogb902" value="" /> 
+                                    <Field name ="ogb903" value="" /> 
+                                    <Field name ="ogb904" value="" /> 
+                                    <Field name ="ogb905" value="" /> 
+                                    <Field name ="ogb906" value="" /> 
+                                    <Field name ="ogb907" value="" /> 
+                                    <Field name ="ogb908" value="" /> 
+                                    <Field name ="ogb909" value="" /> 
+                                    <Field name ="ogb910" value="" /> 
+                                    <Field name ="ogb911" value="" /> 
+                                    <Field name ="ogb912" value="" /> 
+                                    <Field name ="ogb913" value="" />
+                                    <Field name ="ogb914" value="" />
+                                    <Field name ="ogb915" value="" />
+                                    <Field name ="ogb916" value="" />
+                                    <Field name ="ogb917" value="" />
+                                    <Field name ="ogb65" value="" />
+                                    <Field name ="ogb1001" value="" />
+                                    <Field name ="ogb1002" value="" />
+                                    <Field name ="ogb1005" value="" />
+                                    <Field name ="ogb1007" value="" />
+                                    <Field name ="ogb1008" value="" />
+                                    <Field name ="ogb1009" value="" />
+                                    <Field name ="ogb1010" value="" />
+                                    <Field name ="ogb1011" value="" />
+                                    <Field name ="ogb1003" value="" />
+                                    <Field name ="ogb1004" value="" />
+                                    <Field name ="ogb1006" value="" />
+                                    <Field name ="ogb1012" value="" />
+                                    <Field name ="ogb930" value="" />
+                                    <Field name ="ogb1013" value="" />
+                                    <Field name ="ogb1014" value="" />
+                                    <Field name ="ogb41" value="" />
+                                    <Field name ="ogb42" value="" />
+                                    <Field name ="ogb43" value="" />
+                                    <Field name ="ogb931" value="" />
+                                    <Field name ="ogb932" value="" />
+                                    <Field name ="ogbud01" value="" />
+                                    <Field name ="ogbud02" value="" />
+                                    <Field name ="ogbud03" value="" />
+                                    <Field name ="ogbud04" value="" />
+                                    <Field name ="ogbud05" value="" />
+                                    <Field name ="ogbud06" value="" />
+                                    <Field name ="ogbud07" value="" />
+                                    <Field name ="ogbud08" value="" />
+                                    <Field name ="ogbud09" value="" />
+                                    <Field name ="ogbud10" value="" />
+                                    <Field name ="ogbud11" value="" />
+                                    <Field name ="ogbud12" value="" />
+                                    <Field name ="ogbud13" value="" />
+                                    <Field name ="ogbud14" value="" />
+                                    <Field name ="ogbud15" value="" />
+                                    <Field name ="ogb44" value="" />
+                                    <Field name ="ogb45" value="" />
+                                    <Field name ="ogb46" value="" />
+                                    <Field name ="ogb47" value="" />
+                                    <Field name ="ogbplant" value="" />
+                                    <Field name ="ogblegal" value="" />
+                                    <Field name ="ogb48" value="" />
+                                    <Field name ="ogb49" value="" />
+                                    <Field name ="ogb37" value="" />
+                                    <Field name ="ogb40" value="" />
+                                    <Field name ="ogb71" value="" />
+                                    <Field name ="ogb50" value="" />
+                                    <Field name ="ogb51" value="" />
+                                    <Field name ="ogb52" value="" />
+                                    <Field name ="ogb53" value="" />
+                                    <Field name ="ogb54" value="" />
+                                    <Field name ="ogb55" value="" />
+                                    <Field name ="ta_ogb01" value="" />
+                                    <Field name ="ta_ogb02" value="" />
+                                    <Field name ="ta_ogb03" value="" />
+                                    <Field name ="ta_ogb04" value="" />
+                                    <Field name ="ta_ogb05" value="" />
+                                    <Field name ="ta_ogb06" value="" />
+                                    <Field name ="ta_ogb07" value="" />
+                                </Record>
+                                <Record>        --如果有第二行，则加第二个Record标签
+                                </Record>
+                            </Detail>
+                        </RecordSet>
+                        <RecordSet id="2" >     --如果有第二单，则加第二个RecordSet标签 id="2" 注意：一个出货单据，作为一个RecordSet
+                            ......
+                        </RecordSet>
+                    </Document>
+                </RequestContent>
+              </Request>]]></tip:request>
+        </tip:zzgxb.axmt620.createRequest>
+    </soapenv:Body>
+</soapenv:Envelope>  
+
+返回结果：              
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Body>
+        <fjs1:zzgxb.axmt620.createResponse xmlns:fjs1="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+            <fjs1:response><![CDATA[<Response>
+                <Execution>
+                    <Status code="-1" sqlcode="" description=""/>
+                </Execution>
+                <ResponseContent>
+                    <Parameter/>
+                    <Document>
+                        <RecordSet id="1">
+                            <Master name="oga_file">
+                                <Record>
+                                    <Field name="oga01" value=""/>   --返回出货单号
+                                </Record>
+                            </Master>
+                        </RecordSet>
+                        <RecordSet id="2">
+                            <Master name="oga_file">
+                                <Record>
+                                    <Field name="oga01" value=""/>
+                                </Record>
+                            </Master>
+                        </RecordSet>
+                    </Document>
+                </ResponseContent>
+            </Response>]]></fjs1:response>
+      </fjs1:zzgxb.axmt620.createResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+code 0表示成功，非0表示失败
+description 描述
+
+
+
+数据字典
+表名	          名称	    列	    数据类型	      字符位数  小数位数   是否能为NULL	      业务含义
+oga_file	出货单单头档	oga00	varchar2	    1.00		            y	        出货别
+oga_file	出货单单头档	oga01	varchar2	   20.00		            n	        出货单号/出通单号
+oga_file	出货单单头档	oga011	varchar2	   20.00		            y	        出货通知单号
+oga_file	出货单单头档	oga02	date	        7.00		            y	        出货日期
+oga_file	出货单单头档	oga021	date	        7.00		            y	        结关日期
+oga_file	出货单单头档	oga022	date	        7.00		            y	        装船日期
+oga_file	出货单单头档	oga03	varchar2	   10.00		            y	        帐款客户编号
+oga_file	出货单单头档	oga032	varchar2	   40.00		            y	        帐款客户简称
+oga_file	出货单单头档	oga033	varchar2	   20.00		            y	        帐款客户税号
+oga_file	出货单单头档	oga04	varchar2	   10.00		            y	        送货客户编号
+oga_file	出货单单头档	oga044	varchar2	   10.00		            y	        送货地址码
+oga_file	出货单单头档	oga05	varchar2	    5.00		            y	        发票别
+oga_file	出货单单头档	oga06	varchar2	    1.00		            y	        更改版本
+oga_file	出货单单头档	oga07	varchar2	    1.00		            y	        出货是否计入未开发票的销货待验收入
+oga_file	出货单单头档	oga08	varchar2	    1.00		            y	        1.内销 2.外销  3.视同外销
+oga_file	出货单单头档	oga09	varchar2	    1.00		            y	        单据别
+oga_file	出货单单头档	oga10	varchar2	   20.00		            y	        帐单编号
+oga_file	出货单单头档	oga1001	varchar2	   10.00		            y	        收款客户编号
+oga_file	出货单单头档	oga1002	varchar2	   10.00		            y	        债权代码
+oga_file	出货单单头档	oga1003	varchar2	   10.00		            y	        业绩归属组织
+oga_file	出货单单头档	oga1004	varchar2	   10.00		            y	        调货客户
+oga_file	出货单单头档	oga1005	varchar2	    1.00		            y	        是否计算业绩
+oga_file	出货单单头档	oga1006	number	       20.00	6 	            y	        折扣金额(税前)
+oga_file	出货单单头档	oga1007	number	       20.00	6 	            y	        折扣金额(含税)
+oga_file	出货单单头档	oga1008	number	       20.00	6 	            y	        出货总含税金额
+oga_file	出货单单头档	oga1009	varchar2	   10.00		            y	        客户所属通路
+oga_file	出货单单头档	oga1010	varchar2	   10.00		            y	        客户所属组织
+oga_file	出货单单头档	oga1011	varchar2	   10.00		            y	        开票客户
+oga_file	出货单单头档	oga1012	varchar2	   20.00		            y	        销退单单号
+oga_file	出货单单头档	oga1013	varchar2	    1.00		            y	        已打印提单否
+oga_file	出货单单头档	oga1014	varchar2	    1.00		            y	        调货销退单所自动生成否
+oga_file	出货单单头档	oga1015	varchar2	    1.00		            y	        导物流状况码
+oga_file	出货单单头档	oga1016	varchar2	   10.00		            y	        代送商
+oga_file	出货单单头档	oga11	date	        7.00		            y	        应收款日
+oga_file	出货单单头档	oga12	date	        7.00		            y	        容许票据到期日
+oga_file	出货单单头档	oga13	varchar2	   10.00		            y	        科目分类码
+oga_file	出货单单头档	oga14	varchar2	   10.00		            y	        人员编号
+oga_file	出货单单头档	oga15	varchar2	   10.00		            y	        部门编号
+oga_file	出货单单头档	oga16	varchar2	   20.00		            y	        订单单号
+oga_file	出货单单头档	oga161	number	        5.00	0 	            n	        订金应收比率
+oga_file	出货单单头档	oga162	number	        5.00	0 	            n	        出货应收比率
+oga_file	出货单单头档	oga163	number	        5.00	0 	            n	        尾款应收比率
+oga_file	出货单单头档	oga17	number	        5.00	0 	            y	        排货模拟顺序
+oga_file	出货单单头档	oga18	varchar2	   10.00		            y	        收款客户编号
+oga_file	出货单单头档	oga19	varchar2	   20.00		            y	        待抵帐款-预收单号
+oga_file	出货单单头档	oga20	varchar2	    1.00		            y	        分录底稿是否可重新生成
+oga_file	出货单单头档	oga21	varchar2	    4.00		            y	        税种
+oga_file	出货单单头档	oga211	number	        9.00	4 	            y	        税率
+oga_file	出货单单头档	oga212	varchar2	    1.00		            y	        联数
+oga_file	出货单单头档	oga213	varchar2	    1.00		            y	        含税否
+oga_file	出货单单头档	oga23	varchar2	    4.00		            y	        币种
+oga_file	出货单单头档	oga24	number	        20.00	10 	            y	        汇率
+oga_file	出货单单头档	oga25	varchar2	   10.00		            y	        销售分类一
+oga_file	出货单单头档	oga26	varchar2	   10.00		            y	        销售分类二
+oga_file	出货单单头档	oga27	varchar2	   20.00		            y	        invoice no.
+oga_file	出货单单头档	oga28	varchar2	    1.00		            y	        立帐时采用订单汇率
+oga_file	出货单单头档	oga29	number	        20.00	6 	            y	        信用额度余额
+oga_file	出货单单头档	oga30	varchar2	    1.00		            y	        包装单审核码
+oga_file	出货单单头档	oga31	varchar2	    6.00		            y	        价格条件编号
+oga_file	出货单单头档	oga32	varchar2	    6.00		            y	        收款条件编号
+oga_file	出货单单头档	oga33	varchar2	  255.00		            y	        其它条件
+oga_file	出货单单头档	oga34	number          5.00	0 	            y	        佣金率
+oga_file	出货单单头档	oga35	varchar2	    1.00		            y	        外销方式
+oga_file	出货单单头档	oga36	varchar2	   40.00		            y	        非经海关证明文件名称
+oga_file	出货单单头档	oga37	varchar2	   16.00		            y	        非经海关证明文件号码
+oga_file	出货单单头档	oga38	varchar2	   10.00		            y	        出口报单类型
+oga_file	出货单单头档	oga39	varchar2	   30.00		            y	        出口报单号码
+oga_file	出货单单头档	oga40	varchar2	    1.00		            y	        notify
+oga_file	出货单单头档	oga41	varchar2	   10.00		            y	        起运地
+oga_file	出货单单头档	oga42	varchar2	   10.00		            y	        到达地
+oga_file	出货单单头档	oga43	varchar2	   15.00		            y	        交运方式
+oga_file	出货单单头档	oga44	varchar2	   10.00		            y	        唛头编号
+oga_file	出货单单头档	oga45	varchar2	   40.00		            y	        联络人
+oga_file	出货单单头档	oga46	varchar2	   10.00		            y	        项目编号
+oga_file	出货单单头档	oga47	varchar2	  100.00		            y	        船名/车号
+oga_file	出货单单头档	oga48	varchar2	  100.00		            y	        航次
+oga_file	出货单单头档	oga49	date	        7.00		            y	        开航日期
+oga_file	出货单单头档	oga50	number	       20.00	6 	            n	        原币出货金额
+oga_file	出货单单头档	oga501	number	       20.00	6 	            y	        本币出货金额
+oga_file	出货单单头档	oga51	number	       20.00	6 	            y	        原币出货金额
+oga_file	出货单单头档	oga511	number	       20.00	6 	            y	        本币出货金额
+oga_file	出货单单头档	oga52	number	       20.00	6 	            n	        原币预收订金转销货收入金额
+oga_file	出货单单头档	oga53	number	       20.00	6 	            n	        原币应开发票税前金额
+oga_file	出货单单头档	oga54	number	       20.00	6 	            n	        原币已开发票税前金额
+oga_file	出货单单头档	oga55	varchar2	    1.00		            y	        状况码
+oga_file	出货单单头档	oga56	varchar2	   20.00		            y	        签收单号
+oga_file	出货单单头档	oga57	varchar2	    1.00		            n	        发票性质
+oga_file	出货单单头档	oga65	varchar2	    1.00		            y	        客户出货签收否
+oga_file	出货单单头档	oga66	varchar2	   10.00		            y	        出货签收在途/验退仓库
+oga_file	出货单单头档	oga67	varchar2	   40.00		            y	        出货签收在途/验退库位
+oga_file	出货单单头档	oga68	varchar2	   10.00		            y	        no use
+oga_file	出货单单头档	oga69	date	        7.00		            y	        录入日期
+oga_file	出货单单头档	oga70	varchar2	   20.00		            y	        调拨单号
+oga_file	出货单单头档	oga71	varchar2	   20.00		            y	        申报税号
+oga_file	出货单单头档	oga72	date	        7.00		            y	        
+oga_file	出货单单头档	oga83	varchar2	   10.00		            y	        销货营运中心
+oga_file	出货单单头档	oga84	varchar2	   10.00		            y	        取货营运中心
+oga_file	出货单单头档	oga85	varchar2	    1.00		            n	        结算方式
+oga_file	出货单单头档	oga86	varchar2	   10.00		            y	        客层编号
+oga_file	出货单单头档	oga87	varchar2	   30.00		            y	        会员卡号
+oga_file	出货单单头档	oga88	varchar2	   40.00		            y	        顾客姓名
+oga_file	出货单单头档	oga89	varchar2	   20.00		            y	        联系电话
+oga_file	出货单单头档	oga90	varchar2	   10.00		            y	        证件类型
+oga_file	出货单单头档	oga901	varchar2	    1.00		            y	        post to abx system flag
+oga_file	出货单单头档	oga902	varchar2	   10.00		            y	        信用超限留置代码
+oga_file	出货单单头档	oga903	varchar2	    1.00		            y	        信用检查放行否
+oga_file	出货单单头档	oga904	varchar2	   15.00		            y	        no use
+oga_file	出货单单头档	oga905	varchar2	    1.00		            y	        已转三角贸易出货单否
+oga_file	出货单单头档	oga906	varchar2	    1.00		            y	        起始出货单否
+oga_file	出货单单头档	oga907	varchar2	   20.00		            y	        凭证号码
+oga_file	出货单单头档	oga908	varchar2	   10.00		            y	        l/c no
+oga_file	出货单单头档	oga909	varchar2	    1.00		            y	        三角贸易否
+oga_file	出货单单头档	oga91	varchar2	   40.00		            y	        证件号码
+oga_file	出货单单头档	oga910	varchar2	   10.00		            y	        境外仓库
+oga_file	出货单单头档	oga911	varchar2	   40.00		            y	        境外库位
+oga_file	出货单单头档	oga912	varchar2	   10.00		            y	        保税异动原因代码
+oga_file	出货单单头档	oga913	date	        7.00		            y	        保税报单日期
+oga_file	出货单单头档	oga914	varchar2	   20.00		            y	        入库单号
+oga_file	出货单单头档	oga92	varchar2	   20.00		            y	        赠品发放单号
+oga_file	出货单单头档	oga93	varchar2	   20.00		            y	        返券发放单号
+oga_file	出货单单头档	oga94	varchar2	    1.00		            n	        pos销售否 y-是,n-否
+oga_file	出货单单头档	oga95	number	       20.00	0 	            y	        本次积分
+oga_file	出货单单头档	oga96	varchar2	   10.00		            y	        收银机号
+oga_file	出货单单头档	oga97	number	        5.00	0 	            y	        交易序号
+oga_file	出货单单头档	oga98	varchar2	   20.00		            y	        pos单号
+oga_file	出货单单头档	oga99	varchar2	   30.00		            y	        多角贸易流程序号
+oga_file	出货单单头档	ogacond	date	        7.00		            y	        审核日期
+oga_file	出货单单头档	ogaconf	varchar2	    1.00		            y	        审核否/作废码
+oga_file	出货单单头档	ogacont	varchar2	    8.00		            y	        审核时间
+oga_file	出货单单头档	ogaconu	varchar2	   10.00		            y	        审核人员
+oga_file	出货单单头档	ogadate	date	        7.00		            y	        最近更改日
+oga_file	出货单单头档	ogagrup	varchar2	   10.00		            y	        资料所有部门
+oga_file	出货单单头档	ogalegal	varchar2   10.00		            n	        所属法人
+oga_file	出货单单头档	ogamksg	varchar2	    1.00		            y	        签核
+oga_file	出货单单头档	ogamodu	varchar2	   10.00		            y	        资料更改者
+oga_file	出货单单头档	ogaorig	varchar2	   10.00		            y	        资料建立部门
+oga_file	出货单单头档	ogaoriu	varchar2	   10.00		            y	        资料建立者
+oga_file	出货单单头档	ogaplant	varchar2   10.00		            n	        所属营运中心
+oga_file	出货单单头档	ogapost	varchar2	    1.00		            y	        出货扣帐否
+oga_file	出货单单头档	ogaprsw	number	        5.00	0 	            y	        打印次数
+oga_file	出货单单头档	ogaslk01	varchar2   20.00		            y	        装箱单单号
+oga_file	出货单单头档	ogaslk02	varchar2    1.00		            y	        出货类型（现货，期货）
+oga_file	出货单单头档	ogaspc	varchar2	    1.00		            y	        spc抛转码 0/1/2
+oga_file	出货单单头档	ogaud01	varchar2	  255.00		            y	        自订字段-textedit
+oga_file	出货单单头档	ogaud02	varchar2	   40.00		            y	        自订字段-文字
+oga_file	出货单单头档	ogaud03	varchar2	   40.00		            y	        自订字段-文字
+oga_file	出货单单头档	ogaud04	varchar2	   40.00		            y	        自订字段-文字
+oga_file	出货单单头档	ogaud05	varchar2	   40.00		            y	        自订字段-文字
+oga_file	出货单单头档	ogaud06	varchar2	   40.00		            y	        自订字段-文字
+oga_file	出货单单头档	ogaud07	number	       15.00	3 	            y	        自订字段-数值
+oga_file	出货单单头档	ogaud08	number	       15.00	3 	            y	        自订字段-数值
+oga_file	出货单单头档	ogaud09	number	       15.00	3 	            y	        自订字段-数值
+oga_file	出货单单头档	ogaud10	number	       10.00	0 	            y	        自订字段-整数
+oga_file	出货单单头档	ogaud11	number	       10.00	0 	            y	        自订字段-整数
+oga_file	出货单单头档	ogaud12	number	       10.00	0 	            y	        自订字段-整数
+oga_file	出货单单头档	ogaud13	date	        7.00		            y	        自订字段-日期
+oga_file	出货单单头档	ogaud14	date	        7.00		            y	        自订字段-日期
+oga_file	出货单单头档	ogaud15	date	        7.00		            y	        自订字段-日期
+oga_file	出货单单头档	ogauser	varchar2	   10.00		            y	        资料所有者
+oga_file	出货单单头档	ta_oga01	varchar2   10.00		            y	        货代
+oga_file	出货单单头档	ta_oga02	date	    7.00		            y	        预计船期
+oga_file	出货单单头档	ta_oga03	date	    7.00		            y	        预计装箱日
+oga_file	出货单单头档	ta_oga04	date	    7.00		            y	        实际船期
+oga_file	出货单单头档	ta_oga05	varchar2   30.00		            y	        运编号
+oga_file	出货单单头档	ta_oga06	varchar2    1.00		            y	        前tt审核
+oga_file	出货单单头档	ta_oga07	varchar2   30.00		            y	        是否生成调拨单
+oga_file	出货单单头档	ta_oga08	varchar2   30.00		            y	        会销
+oga_file	出货单单头档	ta_oga09	varchar2   30.00		            y	        备注
+oga_file	出货单单头档	ta_oga10	varchar2   30.00		            y	        分销通知单号
+oga_file	出货单单头档	ta_oga11	varchar2   30.00		            y	        分销出货单号
+ogb_file	出货单单身档	ogb01	varchar2	   20.00		            n	        出货单号
+ogb_file	出货单单身档	ogb03	number	        5.00	0 	            n	        项次
+ogb_file	出货单单身档	ogb04	varchar2	   40.00		            y	        产品编号
+ogb_file	出货单单身档	ogb05	varchar2	    4.00		            y	        销售单位
+ogb_file	出货单单身档	ogb05_fac	number	   20.00	8 	            n	        销售/库存汇总单位换算率
+ogb_file	出货单单身档	ogb06	varchar2	  120.00		            y	        品名规格
+ogb_file	出货单单身档	ogb07	varchar2	   10.00		            y	        额外品名编号
+ogb_file	出货单单身档	ogb08	varchar2	   10.00		            y	        出货营运中心编号
+ogb_file	出货单单身档	ogb09	varchar2	   10.00		            y	        出货仓库编号
+ogb_file	出货单单身档	ogb091	varchar2	   40.00		            y	        出货库位编号
+ogb_file	出货单单身档	ogb092	varchar2	   24.00		            y	        出货批号
+ogb_file	出货单单身档	ogb1001	varchar2	   10.00		            y	        原因码
+ogb_file	出货单单身档	ogb1002	varchar2	   10.00		            y	        订价编号
+ogb_file	出货单单身档	ogb1003	date	        7.00		            y	        预计出货日期
+ogb_file	出货单单身档	ogb1004	varchar2	   20.00		            y	        提案编号
+ogb_file	出货单单身档	ogb1005	varchar2	    1.00		            y	        作业方式
+ogb_file	出货单单身档	ogb1006	number	        9.00	4 	            y	        折扣率
+ogb_file	出货单单身档	ogb1007	varchar2	   20.00		            y	        现金折扣单号
+ogb_file	出货单单身档	ogb1008	varchar2	    4.00		            y	        税种
+ogb_file	出货单单身档	ogb1009	number	        9.00	4 	            y	        税率
+ogb_file	出货单单身档	ogb1010	varchar2	    1.00		            y	        含税否
+ogb_file	出货单单身档	ogb1011	varchar2	   15.00		            y	        非直营kab
+ogb_file	出货单单身档	ogb1012	varchar2	    1.00		            y	        搭赠
+ogb_file	出货单单身档	ogb1013	number	       20.00	6 	            y	        已开发票税前金额
+ogb_file	出货单单身档	ogb1014	varchar2	    1.00		            y	        保税已放行否
+ogb_file	出货单单身档	ogb11	varchar2	   40.00		            y	        客户产品编号
+ogb_file	出货单单身档	ogb12	number	       15.00	3 	            n	        实际出货数量
+ogb_file	出货单单身档	ogb13	number	       20.00	6 	            n	        原币单价
+ogb_file	出货单单身档	ogb14	number	       20.00	6 	            n	        原币税前金额
+ogb_file	出货单单身档	ogb14t	number	       20.00	6 	            n	        原币含税金额
+ogb_file	出货单单身档	ogb15	varchar2	    4.00		            y	        库存明细单位由厂/仓/位/批自动得出
+ogb_file	出货单单身档	ogb15_fac	number	   20.00	8 	            n	        销售/库存明细单位换算率
+ogb_file	出货单单身档	ogb16	number	       15.00	3 	            n	        数量
+ogb_file	出货单单身档	ogb17	varchar2	    1.00		            y	        多仓位批出货否
+ogb_file	出货单单身档	ogb18	number	       15.00	3 	            n	        预计出货数量
+ogb_file	出货单单身档	ogb19	varchar2	    1.00		            y	        检验否
+ogb_file	出货单单身档	ogb20	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb21	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb22	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb31	varchar2	   20.00		            y	        订单单号
+ogb_file	出货单单身档	ogb32	number	        5.00	0 	            y	        订单项次
+ogb_file	出货单单身档	ogb37	number	       20.00	6 	            n	        基础单价
+ogb_file	出货单单身档	ogb40	varchar2	   10.00		            y	        抽成编号
+ogb_file	出货单单身档	ogb41	varchar2	   10.00		            y	        项目编号
+ogb_file	出货单单身档	ogb42	varchar2	   30.00		            y	        wbs编号
+ogb_file	出货单单身档	ogb43	varchar2	    4.00		            y	        活动编号
+ogb_file	出货单单身档	ogb44	varchar2	    1.00		            n	        经营方式
+ogb_file	出货单单身档	ogb45	number	        5.00	2 	            y	        原扣率
+ogb_file	出货单单身档	ogb46	number	        5.00	2 	            y	        新扣率
+ogb_file	出货单单身档	ogb47	number	       20.00	6 	            n	        分摊折价=全部折价字段值的和值
+ogb_file	出货单单身档	ogb48	varchar2	   20.00		            y	        摊位编号
+ogb_file	出货单单身档	ogb49	varchar2	   10.00		            y	        商户编号
+ogb_file	出货单单身档	ogb50	number	       15.00	3 	            n	        开票性质
+ogb_file	出货单单身档	ogb51	number	       15.00	3 	            n	        已签退数量
+ogb_file	出货单单身档	ogb52	number	       15.00	3 	            n	        簽退數量
+ogb_file	出货单单身档	ogb53	number	       15.00	3 	            n	        單位一驗退數量
+ogb_file	出货单单身档	ogb54	number	       15.00	3 	            n	        單位二驗退數量
+ogb_file	出货单单身档	ogb55	number	       15.00	3 	            n	        驗退計價數量
+ogb_file	出货单单身档	ogb60	number	       15.00	3 	            n	        已开发票数量
+ogb_file	出货单单身档	ogb63	number	       15.00	3 	            n	        销退数量
+ogb_file	出货单单身档	ogb64	number	       15.00	3 	            n	        销退数量
+ogb_file	出货单单身档	ogb65	varchar2	   10.00		            y	        验退理由码
+ogb_file	出货单单身档	ogb71	varchar2	   20.00		            y	        发票号码
+ogb_file	出货单单身档	ogb901	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb902	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb903	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb904	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb905	varchar2	    1.00		            y	        no use
+ogb_file	出货单单身档	ogb906	varchar2	    1.00		            y	        是否必须客检
+ogb_file	出货单单身档	ogb907	varchar2	    1.00		            y	        客检标志完成y/n
+ogb_file	出货单单身档	ogb908	varchar2	   20.00		            y	        手册编号
+ogb_file	出货单单身档	ogb909	varchar2	    1.00		            y	        结案标志
+ogb_file	出货单单身档	ogb910	varchar2	    4.00		            y	        单位一
+ogb_file	出货单单身档	ogb911	number	       20.00	8 	            y	        单位一换算率(与销售单位)
+ogb_file	出货单单身档	ogb912	number	       15.00	3 	            y	        单位一数量
+ogb_file	出货单单身档	ogb913	varchar2	    4.00		            y	        单位二
+ogb_file	出货单单身档	ogb914	number	       20.00	8 	            y	        单位二换算率(与销售单位)
+ogb_file	出货单单身档	ogb915	number	       15.00	3 	            y	        单位二数量
+ogb_file	出货单单身档	ogb916	varchar2	    4.00		            y	        计价单位
+ogb_file	出货单单身档	ogb917	number	       15.00	3 	            y	        计价数量
+ogb_file	出货单单身档	ogb930	varchar2	   10.00		            y	        成本中心
+ogb_file	出货单单身档	ogb931	varchar2	   20.00		            y	        包装编号
+ogb_file	出货单单身档	ogb932	number	       15.00	3 	            y	        包装数量
+ogb_file	出货单单身档	ogblegal	varchar2   10.00		            n	        所属法人
+ogb_file	出货单单身档	ogbplant	varchar2   10.00		            n	        所属营运中心
+ogb_file	出货单单身档	ogbud01	varchar2	  255.00		            y	        自订字段-textedit
+ogb_file	出货单单身档	ogbud02	varchar2	   40.00		            y	        自订字段-文字
+ogb_file	出货单单身档	ogbud03	varchar2	   40.00		            y	        自订字段-文字
+ogb_file	出货单单身档	ogbud04	varchar2	   40.00		            y	        自订字段-文字
+ogb_file	出货单单身档	ogbud05	varchar2	   40.00		            y	        自订字段-文字
+ogb_file	出货单单身档	ogbud06	varchar2	   40.00		            y	        自订字段-文字
+ogb_file	出货单单身档	ogbud07	number	       15.00	3 	            y	        自订字段-数值
+ogb_file	出货单单身档	ogbud08	number	       15.00	3 	            y	        自订字段-数值
+ogb_file	出货单单身档	ogbud09	number	       15.00	3 	            y	        自订字段-数值
+ogb_file	出货单单身档	ogbud10	number	       10.00	0 	            y	        自订字段-整数
+ogb_file	出货单单身档	ogbud11	number	       10.00	0 	            y	        自订字段-整数
+ogb_file	出货单单身档	ogbud12	number	       10.00	0 	            y	        自订字段-整数
+ogb_file	出货单单身档	ogbud13	date	        7.00		            y	        自订字段-日期
+ogb_file	出货单单身档	ogbud14	date	        7.00		            y	        自订字段-日期
+ogb_file	出货单单身档	ogbud15	date	        7.00		            y	        自订字段-日期
+ogb_file	出货单单身档	ta_ogb01	number	    5.00	0 	            y	        杂发单单身项次
+ogb_file	出货单单身档	ta_ogb02	varchar2   20.00		            y	        联动收货单号
+ogb_file	出货单单身档	ta_ogb03	number	    5.00	0 	            y	        收货单单身项次/分销
+ogb_file	出货单单身档	ta_ogb04	number	   15.00	3 	            y	        销退数量 (不需换货出货/未开票)
+ogb_file	出货单单身档	ta_ogb05	varchar2   20.00		            y	        联动杂发单号
+ogb_file	出货单单身档	ta_ogb06	number	   15.00	3 	            y	        送货余量
+ogb_file	出货单单身档	ta_ogb07	number	   15.00	3 	            y	        通知单已出货数量

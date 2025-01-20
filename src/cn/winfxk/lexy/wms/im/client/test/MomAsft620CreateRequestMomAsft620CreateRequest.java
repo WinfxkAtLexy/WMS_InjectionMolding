@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>LiHua_Order_CreateResponse_LiHua_Order_CreateResponse complex typeµÄ Java Àà¡£
+ * <p>mom.asft620.createRequest_mom.asft620.createRequest complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
- * &lt;complexType name="LiHua_Order_CreateResponse_LiHua_Order_CreateResponse">
+ * &lt;complexType name="mom.asft620.createRequest_mom.asft620.createRequest">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="response" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="request" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,36 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LiHua_Order_CreateResponse_LiHua_Order_CreateResponse", propOrder = {
-    "response"
+@XmlType(name = "mom.asft620.createRequest_mom.asft620.createRequest", propOrder = {
+    "request"
 })
-public class LiHuaOrderCreateResponseLiHuaOrderCreateResponse {
+public class MomAsft620CreateRequestMomAsft620CreateRequest {
 
     @XmlElement(required = true, nillable = true)
-    protected String response;
+    protected String request;
 
     /**
-     * »ñÈ¡responseÊôĞÔµÄÖµ¡£
+     * è·å–requestå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getResponse() {
-        return response;
+    public String getRequest() {
+        return request;
     }
 
     /**
-     * ÉèÖÃresponseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®requestå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setResponse(String value) {
-        this.response = value;
+    public void setRequest(String value) {
+        this.request = value;
     }
 
 }

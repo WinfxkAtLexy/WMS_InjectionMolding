@@ -1,0 +1,25 @@
+<Response>
+    <Execution>
+        <Status code="-1" sqlcode="" description=""/>
+    </Execution>
+    <ResponseContent>
+        <Parameter/>
+        <Document>
+            <RecordSet id="1">
+                <Master name="oga_file">
+                    <Record>
+                        <Field name="oga01" value=""/>
+                        --返回出货单号
+                    </Record>
+                </Master>
+            </RecordSet>
+            <RecordSet id="2">
+                <Master name="oga_file">
+                    <Record>
+                        <Field name="oga01" value=""/>
+                    </Record>
+                </Master>
+            </RecordSet>
+        </Document>
+    </ResponseContent>
+</Response>

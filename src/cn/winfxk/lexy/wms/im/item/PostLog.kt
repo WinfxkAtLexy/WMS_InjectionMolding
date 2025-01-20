@@ -20,15 +20,17 @@ import com.mchange.v2.c3p0.ComboPooledDataSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.io.PrintWriter
+import java.io.StringWriter
 import java.util.*
 
-class PostLog(var IPC: String?, var SYS_C: String?, var ITEM_C: String?, var ITEM_N: String?, var STATE: String?, var CONTEXT: String?, var RESULT: String?, var MARK: String?, var CNAME: String?, var FAC_C: String?, var MCODE: String?) {
+class PostLog(var IPC: String?, var SYS_C: String?, var ITEM_C: String?, var ITEM_N: String?, var STATE: String?, var CONTEXT: String?, var RESULT: String?, var MARK: String?, var CNAME: String?, var FAC_C: String?, var MCODE: String?, var throwable: Throwable? = null) {
     constructor() : this(null, null, null, null, null, null, null, null, null, null, null)
-    constructor(xml: Response) : this("${xml.fac}_SIMFSH_Magt_entery_chk_fshentry_frm_${UUID.randomUUID()}", "WMS", "SIMFSH_Magt_entery_chk_fshentry_frm", "注塑件收货", "NG", xml.getRequest(), xml.backtrack(), xml.getDescription(), xml.sfu16, xml.fac, "1001")
+    constructor(xml: Response) : this("${xml.fac}_SIMFSH_Magt_entery_chk_fshentry_frm_${UUID.randomUUID()}", "WMS", "SIMFSH_Magt_entery_chk_fshentry_frm", "注塑件收货", "NG", xml.getRequest(), xml.backtrack(), xml.getDescription(), xml.sfu16, xml.fac, "1001", null)
 
     companion object {
         private val log = Log(PostLog::class.java.simpleName)
-        private val scope = CoroutineScope(Dispatchers.Default);
+        val scope = CoroutineScope(Dispatchers.Default);
         private val dataSource = ComboPooledDataSource().also {
             log.i("初始化数据库链接")
             it.driverClass = "oracle.jdbc.driver.OracleDriver"
@@ -40,8 +42,9 @@ class PostLog(var IPC: String?, var SYS_C: String?, var ITEM_C: String?, var ITE
             it.minPoolSize = 5
             it.maxIdleTime = 300
             it.acquireIncrement = 5
+            log.i("数据库初始化完成！")
         }
-        private const val sql = "insert into WMS_LOG_RECORD (IPC, SYS_C, ITEM_C, ITEM_N, STATE, CONTEXT, RESULT, MARK, CNAME, FAC_C,MCODE) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        private const val sql = "insert into WMS_LOG_RECORD (IPC, SYS_C, ITEM_C, ITEM_N, STATE, CONTEXT, RESULT, MARK, CNAME, FAC_C,MCODE,EXCEPTION) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     }
 
     fun post() {
@@ -60,6 +63,11 @@ class PostLog(var IPC: String?, var SYS_C: String?, var ITEM_C: String?, var ITE
                     stmt.setString(9, CNAME);
                     stmt.setString(10, FAC_C);
                     stmt.setString(11, MCODE);
+                    stmt.setString(12,throwable?.let {
+                        StringWriter().apply {
+                            it.printStackTrace(PrintWriter(this))
+                        }.toString()
+                    });
                     if (stmt.executeUpdate() > 0) log.i("日志插入成功！")
                     else log.e("日志插入失败！")
                 }
