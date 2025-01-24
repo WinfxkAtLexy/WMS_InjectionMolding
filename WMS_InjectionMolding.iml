@@ -15,5 +15,6 @@
     <orderEntry type="library" name="Winfxklik" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="kotlinx-coroutines-core" level="project" />
+    <orderEntry type="library" name="jsoup" level="project" />
   </component>
 </module>

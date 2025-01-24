@@ -87,6 +87,30 @@ public interface TIPTOPServiceGateWayPortType {
      * 
      * @param parameters
      * @return
+     *     returns cn.winfxk.lexy.wms.im.client.test.StmsAxmt670CreateResponseStmsAxmt670CreateResponse
+     */
+    @WebMethod(operationName = "stms.axmt670.create")
+    @WebResult(name = "stms.axmt670.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public StmsAxmt670CreateResponseStmsAxmt670CreateResponse stmsAxmt670Create(
+        @WebParam(name = "stms.axmt670.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        StmsAxmt670CreateRequestStmsAxmt670CreateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
+     *     returns cn.winfxk.lexy.wms.im.client.test.ZzgxbAxmt620CreateResponseZzgxbAxmt620CreateResponse
+     */
+    @WebMethod(operationName = "zzgxb.axmt620.create")
+    @WebResult(name = "zzgxb.axmt620.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public ZzgxbAxmt620CreateResponseZzgxbAxmt620CreateResponse zzgxbAxmt620Create(
+        @WebParam(name = "zzgxb.axmt620.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        ZzgxbAxmt620CreateRequestZzgxbAxmt620CreateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
      *     returns cn.winfxk.lexy.wms.im.client.test.XnyWarehouseMiscellaneousCreateResponseXnyWarehouseMiscellaneousCreateResponse
      */
     @WebMethod(operationName = "xny.warehouse.miscellaneous.create")
@@ -147,25 +171,61 @@ public interface TIPTOPServiceGateWayPortType {
      * 
      * @param parameters
      * @return
-     *     returns cn.winfxk.lexy.wms.im.client.test.MomAsft620CreateResponseMomAsft620CreateResponse
+     *     returns cn.winfxk.lexy.wms.im.client.test.StmsDeliveryorderGetResponseStmsDeliveryorderGetResponse
      */
-    @WebMethod(operationName = "mom.asft620.create")
-    @WebResult(name = "mom.asft620.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-    public MomAsft620CreateResponseMomAsft620CreateResponse momAsft620Create(
-        @WebParam(name = "mom.asft620.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-        MomAsft620CreateRequestMomAsft620CreateRequest parameters);
+    @WebMethod(operationName = "stms.deliveryorder.get")
+    @WebResult(name = "stms.deliveryorder.getResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public StmsDeliveryorderGetResponseStmsDeliveryorderGetResponse stmsDeliveryorderGet(
+        @WebParam(name = "stms.deliveryorder.getRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest parameters);
 
     /**
      * 
      * @param parameters
      * @return
-     *     returns cn.winfxk.lexy.wms.im.client.test.MomAqct110CreateResponseMomAqct110CreateResponse
+     *     returns cn.winfxk.lexy.wms.im.client.test.LiHuaOrderUpdateResponseLiHuaOrderUpdateResponse
      */
-    @WebMethod(operationName = "mom.aqct110.create")
-    @WebResult(name = "mom.aqct110.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-    public MomAqct110CreateResponseMomAqct110CreateResponse momAqct110Create(
-        @WebParam(name = "mom.aqct110.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-        MomAqct110CreateRequestMomAqct110CreateRequest parameters);
+    @WebMethod(operationName = "LiHua_Order_Update")
+    @WebResult(name = "LiHua_Order_UpdateResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public LiHuaOrderUpdateResponseLiHuaOrderUpdateResponse liHuaOrderUpdate(
+        @WebParam(name = "LiHua_Order_UpdateRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        LiHuaOrderUpdateRequestLiHuaOrderUpdateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
+     *     returns cn.winfxk.lexy.wms.im.client.test.LiHuaBma05UpdateResponseLiHuaBma05UpdateResponse
+     */
+    @WebMethod(operationName = "LiHua_Bma05_Update")
+    @WebResult(name = "LiHua_Bma05_UpdateResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public LiHuaBma05UpdateResponseLiHuaBma05UpdateResponse liHuaBma05Update(
+        @WebParam(name = "LiHua_Bma05_UpdateRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        LiHuaBma05UpdateRequestLiHuaBma05UpdateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
+     *     returns cn.winfxk.lexy.wms.im.client.test.LiHuaInvoiceCreateResponseLiHuaInvoiceCreateResponse
+     */
+    @WebMethod(operationName = "LiHua_InvoiceCreate")
+    @WebResult(name = "LiHua_InvoiceCreateResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public LiHuaInvoiceCreateResponseLiHuaInvoiceCreateResponse liHuaInvoiceCreate(
+        @WebParam(name = "LiHua_InvoiceCreateRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        LiHuaInvoiceCreateRequestLiHuaInvoiceCreateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
+     *     returns cn.winfxk.lexy.wms.im.client.test.ScmCxmt634ConfirmResponseScmCxmt634ConfirmResponse
+     */
+    @WebMethod(operationName = "scm.cxmt634.confirm")
+    @WebResult(name = "scm.cxmt634.confirmResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public ScmCxmt634ConfirmResponseScmCxmt634ConfirmResponse scmCxmt634Confirm(
+        @WebParam(name = "scm.cxmt634.confirmRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        ScmCxmt634ConfirmRequestScmCxmt634ConfirmRequest parameters);
 
     /**
      * 
@@ -183,6 +243,18 @@ public interface TIPTOPServiceGateWayPortType {
      * 
      * @param parameters
      * @return
+     *     returns cn.winfxk.lexy.wms.im.client.test.MomAqct110CreateResponseMomAqct110CreateResponse
+     */
+    @WebMethod(operationName = "mom.aqct110.create")
+    @WebResult(name = "mom.aqct110.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public MomAqct110CreateResponseMomAqct110CreateResponse momAqct110Create(
+        @WebParam(name = "mom.aqct110.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        MomAqct110CreateRequestMomAqct110CreateRequest parameters);
+
+    /**
+     * 
+     * @param parameters
+     * @return
      *     returns cn.winfxk.lexy.wms.im.client.test.ZzgxbAsft620CreateResponseZzgxbAsft620CreateResponse
      */
     @WebMethod(operationName = "zzgxb.asft620.create")
@@ -195,36 +267,24 @@ public interface TIPTOPServiceGateWayPortType {
      * 
      * @param parameters
      * @return
-     *     returns cn.winfxk.lexy.wms.im.client.test.StmsAxmt670CreateResponseStmsAxmt670CreateResponse
+     *     returns cn.winfxk.lexy.wms.im.client.test.LiHuaOrderCreateResponseLiHuaOrderCreateResponse
      */
-    @WebMethod(operationName = "stms.axmt670.create")
-    @WebResult(name = "stms.axmt670.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-    public StmsAxmt670CreateResponseStmsAxmt670CreateResponse stmsAxmt670Create(
-        @WebParam(name = "stms.axmt670.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-        StmsAxmt670CreateRequestStmsAxmt670CreateRequest parameters);
+    @WebMethod(operationName = "LiHua_Order_Create")
+    @WebResult(name = "LiHua_Order_CreateResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public LiHuaOrderCreateResponseLiHuaOrderCreateResponse liHuaOrderCreate(
+        @WebParam(name = "LiHua_Order_CreateRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        LiHuaOrderCreateRequestLiHuaOrderCreateRequest parameters);
 
     /**
      * 
      * @param parameters
      * @return
-     *     returns cn.winfxk.lexy.wms.im.client.test.StmsDeliveryorderGetResponseStmsDeliveryorderGetResponse
+     *     returns cn.winfxk.lexy.wms.im.client.test.MomAsft620CreateResponseMomAsft620CreateResponse
      */
-    @WebMethod(operationName = "stms.deliveryorder.get")
-    @WebResult(name = "stms.deliveryorder.getResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-    public StmsDeliveryorderGetResponseStmsDeliveryorderGetResponse stmsDeliveryorderGet(
-        @WebParam(name = "stms.deliveryorder.getRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-        StmsDeliveryorderGetRequestStmsDeliveryorderGetRequest parameters);
-
-    /**
-     * 
-     * @param parameters
-     * @return
-     *     returns cn.winfxk.lexy.wms.im.client.test.ScmCxmt634ConfirmResponseScmCxmt634ConfirmResponse
-     */
-    @WebMethod(operationName = "scm.cxmt634.confirm")
-    @WebResult(name = "scm.cxmt634.confirmResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-    public ScmCxmt634ConfirmResponseScmCxmt634ConfirmResponse scmCxmt634Confirm(
-        @WebParam(name = "scm.cxmt634.confirmRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
-        ScmCxmt634ConfirmRequestScmCxmt634ConfirmRequest parameters);
+    @WebMethod(operationName = "mom.asft620.create")
+    @WebResult(name = "mom.asft620.createResponse", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+    public MomAsft620CreateResponseMomAsft620CreateResponse momAsft620Create(
+        @WebParam(name = "mom.asft620.createRequest", targetNamespace = "http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay", partName = "parameters")
+        MomAsft620CreateRequestMomAsft620CreateRequest parameters);
 
 }

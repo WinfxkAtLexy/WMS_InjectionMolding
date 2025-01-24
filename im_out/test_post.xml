@@ -1,0 +1,68 @@
+<Request>
+    <Access>
+        <Authentication user="" password=""/>
+        <Connection application="" source=""/>
+        <Organization name="KC24"/>
+        --填ERP的法人编号 例如 KC04
+        <Locale language="zh_cn"/>
+        --language="zh_cn"
+    </Access>
+    <RequestContent>
+        <Parameter>
+            <Record>
+                <Field name="reqno" value="cI7wj4P-393M"/>
+                --请求编号
+                <Field name="reqtime" value="2025-01-21 15:13:59"/>
+                --请求时间 yyyy-MM-dd HH:mm:ss
+                <Field name="reqclient" value="zzgxb"/>
+                --请求来源 固定值 "zzgxb"
+                <Field name="reqtype" value="0"/>
+                --类型 固定值 '0'
+            </Record>
+        </Parameter>
+        <Document>
+            <Document>
+                <RecordSet id="1">
+                    <Master name="oga_file">
+                        <Record>
+                            <Field name="oga03" value="011505003"/>
+                            <Field name="oga14" value="kcl2120"/>
+                            <Field name="oga15" value="5100"/>
+                            <Field name="oga21" value="S013"/>
+                            <Field name="oga00" value="1"/>
+                            <Field name="oga23" value="RMB"/>
+                            <Field name="oga02" value="2025-01-21"/>
+                            <Field name="oga08" value="1"/>
+                            <Field name="oga09" value="2"/>
+
+                        </Record>
+                    </Master>
+                    <Detail name="ogb_file">
+                        <Record>
+                            <Field name="ogb03" value="1"/>
+                            <Field name="ogb04" value="Q430125P609"/>
+                            <Field name="ogb05" value="PCS"/>
+                            <Field name="ogb31" value="S1900-150100045"/>
+                            <Field name="ogb32" value="1"/>
+                            <Field name="ogb12" value="1.000"/>
+                            <Field name="ogb091" value="C"/>
+                            <Field name="ogb092" value=" "/>
+                            <Field name="ogb09" value="1013"/>
+
+                        </Record>
+                    </Detail>
+                </RecordSet>
+
+            </Document>
+        </Document>
+    </RequestContent>
+</Request>
+<Response>
+<Execution>
+    <Status code="0" sqlcode="0" description="成功！"/>
+</Execution>
+<ResponseContent>
+    <Parameter/>
+    <Document/>
+</ResponseContent>
+</Response>

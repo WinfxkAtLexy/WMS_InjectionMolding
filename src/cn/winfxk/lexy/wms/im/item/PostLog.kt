@@ -44,7 +44,7 @@ class PostLog(var IPC: String?, var SYS_C: String?, var ITEM_C: String?, var ITE
             it.acquireIncrement = 5
             log.i("数据库初始化完成！")
         }
-        private const val sql = "insert into WMS_LOG_RECORD (IPC, SYS_C, ITEM_C, ITEM_N, STATE, CONTEXT, RESULT, MARK, CNAME, FAC_C,MCODE,EXCEPTION) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        private const val sql = "insert into WMS_LOG_RECORD (IPC, SYS_C, ITEM_C, ITEM_N, STATE, CONTEXT, RESULT, MARK, CNAME, FAC_C,MCODE,EXCEPTION) values (?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?)";
     }
 
     fun post() {
