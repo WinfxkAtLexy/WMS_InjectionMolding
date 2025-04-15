@@ -1,0 +1,65 @@
+<Request>
+    <Access>
+        <Authentication user="" password=""/>
+        <Connection application="" source=""/>
+        <Organization name="KC04"/>
+        --填ERP的法人编号 例如 KC04
+        <Locale language="zh_cn"/>
+        --language="zh_cn"
+    </Access>
+    <RequestContent>
+        <Parameter>
+            <Record>
+                <Field name="reqno" value="cbTa4D3-ChYs"/>
+                --请求编号
+                <Field name="reqtime" value="2025-04-15 10:51:55"/>
+                --请求时间 yyyy-MM-dd HH:mm:ss
+                <Field name="reqclient" value="zzgxb"/>
+                --请求来源 固定值 "zzgxb"
+                <Field name="reqtype" value="0"/>
+                --类型 固定值 '0'
+            </Record>
+        </Parameter>
+        <Document>
+            <RecordSet id="1">
+                <Master name="ina_file">
+                    <Record>
+                        <Field name="ina00" value="3"/>
+                        <Field name="ina02" value="2025-04-15"/>
+                        <Field name="ina03" value="2025-04-15"/>
+                        <Field name="ina04" value="1604"/>
+                        <Field name="ina07" value="备注"/>
+                        <Field name="ina11" value="kc"/>
+                    </Record>
+                </Master>
+                <Detail name="inb_file">
+                    <Record>
+                        <Field name="inb03" value="1"/>
+                        <Field name="inb04" value="Q10X0070860"/>
+                        <Field name="inb05" value="1334"/>
+                        <Field name="inb08" value="PCS"/>
+                        <Field name="inb15" value="BMLY"/>
+                        <Field name="inb16" value="1"/>
+                    </Record>
+                </Detail>
+            </RecordSet>
+        </Document>
+    </RequestContent>
+</Request>
+
+
+
+
+
+
+<Response>
+<Execution>
+    <Status code="-1" sqlcode="0" description="第1单,杂发日期不在当前成本期间"/>
+</Execution>
+<ResponseContent>
+    <Parameter/>
+    <Document>
+        <Results RecordSet="1" Docno="" Messsage="第1单,杂发日期不在当前成本期间"/>
+    </Document>
+</ResponseContent>
+</Response>

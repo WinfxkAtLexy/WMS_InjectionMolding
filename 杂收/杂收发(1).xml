@@ -1,0 +1,376 @@
+测试地址：http://192.168.1.6:8902/?wsdl
+正式地址：http://192.168.0.165/web/ws/r/aws_ttsrv4?wsdl
+
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:tip="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tip:zzgxb.aimt370.createRequest>
+            <tip:request><![CDATA[<Request>
+                <Access>
+                    <Authentication user="" password=""/>
+                    <Connection application="" source=""/>          
+                    <Organization name="KC04"/>                     --填ERP的法人编号 例如 KC04
+                    <Locale language="zh_cn"/>                      --language="zh_cn"
+                </Access>
+                <RequestContent>
+                    <Parameter>
+                        <Record>
+                            <Field name ="reqno" value="12345678" />                --请求编号
+                            <Field name ="reqtime" value="2024-11-14 9:37:51" />    --请求时间   yyyy-MM-dd HH:mm:ss
+                            <Field name ="reqclient" value="zzgxb" />               --请求来源   固定值 "zzgxb"
+                            <Field name ="reqtype" value="0" />                     --类型       固定值 '0'
+                        </Record>
+                    </Parameter>
+                    <Document>
+                        <RecordSet id="1" >
+                            <Master name="ina_file">
+                                <Record>
+                                    <Field name ="ina00" value="" />            --varchar2(1)    '1'杂发 '3'杂收 '5'报废
+                                    <Field name ="ina01" value="" />            --varchar2(20)     
+                                    <Field name ="ina02" value="" />            --date           扣账日期 'yyyy-MM-dd'                       
+                                    <Field name ="ina03" value="" />            --date           生成日期 'yyyy-MM-dd'                 
+                                    <Field name ="ina04" value="" />            --varchar2(10)   部门编号
+                                    <Field name ="ina05" value="" />            --varchar2(1)                          
+                                    <Field name ="ina06" value="" />            --varchar2(10)                         
+                                    <Field name ="ina07" value="" />            --varchar2(255)                        
+                                    <Field name ="ina08" value="" />            --varchar2(1)                          
+                                    <Field name ="ina09" value="" />            --varchar2(1)                          
+                                    <Field name ="ina10" value="" />            --varchar2(20)                         
+                                    <Field name ="inaprsw" value="" />          --number(5)                            
+                                    <Field name ="inapost" value="" />          --varchar2(1)                          
+                                    <Field name ="inauser" value="" />          --varchar2(10)                         
+                                    <Field name ="inagrup" value="" />          --varchar2(10)                         
+                                    <Field name ="inamodu" value="" />          --varchar2(10)                         
+                                    <Field name ="inadate" value="" />          --date                                 
+                                    <Field name ="inamksg" value="" />          --varchar2(1)                          
+                                    <Field name ="ina11" value="" />            --varchar2(10)   申请人                     
+                                    <Field name ="ina1001" value="" />          --varchar2(10)                         
+                                    <Field name ="ina1003" value="" />          --varchar2(10)                         
+                                    <Field name ="ina1002" value="" />          --varchar2(10)                         
+                                    <Field name ="ina1004" value="" />          --varchar2(10)                         
+                                    <Field name ="ina1005" value="" />          --varchar2(10)                         
+                                    <Field name ="ina1006" value="" />            --varchar2(255)                        
+                                    <Field name ="ina1007" value="" />            --varchar2(255)                        
+                                    <Field name ="ina1008" value="" />            --varchar2(255)                        
+                                    <Field name ="ina1009" value="" />            --varchar2(10)                         
+                                    <Field name ="ina1010" value="" />            --varchar2(10)                         
+                                    <Field name ="ina1011" value="" />            --varchar2(10)                         
+                                    <Field name ="ina1012" value="" />            --varchar2(10)                         
+                                    <Field name ="ina1013" value="" />            --date                                 
+                                    <Field name ="ina1014" value="" />            --date                                 
+                                    <Field name ="ina1015" value="" />            --number(15,3)                         
+                                    <Field name ="ina1016" value="" />            --number(15,3)                         
+                                    <Field name ="ina1017" value="" />            --varchar2(20)                         
+                                    <Field name ="ina1018" value="" />            --varchar2(20)                         
+                                    <Field name ="ina1019" value="" />            --varchar2(15)                         
+                                    <Field name ="ina1020" value="" />            --number(20,6)                         
+                                    <Field name ="ina1021" value="" />            --varchar2(1)                          
+                                    <Field name ="ina1022" value="" />            --varchar2(1)                          
+                                    <Field name ="ina1023" value="" />            --varchar2(4)                          
+                                    <Field name ="ina1024" value="" />            --number(20,10)                        
+                                    <Field name ="ina1025" value="" />            --varchar2(1)                          
+                                    <Field name ="inaconf" value="" />            --varchar2(1)                          
+                                    <Field name ="inaspc" value="" />            --varchar2(1)                          
+                                    <Field name ="ina100" value="" />            --varchar2(10)                         
+                                    <Field name ="ina101" value="" />            --varchar2(30)                         
+                                    <Field name ="ina102" value="" />            --date                                 
+                                    <Field name ="inaud01" value="" />            --varchar2(255)                        
+                                    <Field name ="inaud02" value="" />            --varchar2(40)                         
+                                    <Field name ="inaud03" value="" />            --varchar2(40)                         
+                                    <Field name ="inaud04" value="" />            --varchar2(40)                         
+                                    <Field name ="inaud05" value="" />            --varchar2(40)                         
+                                    <Field name ="inaud06" value="" />            --varchar2(40)                         
+                                    <Field name ="inaud07" value="" />            --number(15,3)                         
+                                    <Field name ="inaud08" value="" />            --number(15,3)                         
+                                    <Field name ="inaud09" value="" />            --number(15,3)                         
+                                    <Field name ="inaud10" value="" />            --number(10)                           
+                                    <Field name ="inaud11" value="" />            --number(10)                           
+                                    <Field name ="inaud12" value="" />            --number(10)                           
+                                    <Field name ="inaud13" value="" />            --date                                 
+                                    <Field name ="inaud14" value="" />            --date                                 
+                                    <Field name ="inaud15" value="" />            --date                                 
+                                    <Field name ="ina103" value="" />            --varchar2(20)                         
+                                    <Field name ="ina12" value="" />             --varchar2(1)            'n'              
+                                    <Field name ="inacond" value="" />            --date                                 
+                                    <Field name ="inacont" value="" />            --varchar2(8)                          
+                                    <Field name ="inaconu" value="" />            --varchar2(10)                         
+                                    <Field name ="inapos" value="" />            --varchar2(1)            '1'              
+                                    <Field name ="inaplant" value="" />            --varchar2(10)                            
+                                    <Field name ="inalegal" value="" />            --varchar2(10)                            
+                                    <Field name ="inaoriu" value="" />            --varchar2(10)                         
+                                    <Field name ="inaorig" value="" />            --varchar2(10)                         
+                                    <Field name ="ina13" value="" />            --varchar2(20)                         
+                                    <Field name ="ta_ina01" value="" />            --varchar2(255)                        
+                                    <Field name ="ta_ina02" value="" />            --varchar2(10)                         
+                                    <Field name ="ta_ina03" value="" />            --varchar2(1)           
+                                </Record>
+                            </Master>
+                            <Detail name="inb_file">
+                                <Record>
+                                    <Field name ="inb01" value="" />            --varchar2(20)                            
+                                    <Field name ="inb03" value="" />            --number(5)                               
+                                    <Field name ="inb04" value="" />            --varchar2(40)                         
+                                    <Field name ="inb05" value="" />            --varchar2(10)                         
+                                    <Field name ="inb06" value="" />            --varchar2(40)                         
+                                    <Field name ="inb07" value="" />            --varchar2(24)                         
+                                    <Field name ="inb08" value="" />            --varchar2(4)                          
+                                    <Field name ="inb08_fac" value="" />            --number(20,8)                            
+                                    <Field name ="inb09" value="" />            --number(15,3)                            
+                                    <Field name ="inb10" value="" />            --varchar2(1)                          
+                                    <Field name ="inb11" value="" />            --varchar2(20)                         
+                                    <Field name ="inb12" value="" />            --varchar2(20)                         
+                                    <Field name ="inb13" value="" />            --number(20,6)                         
+                                    <Field name ="inb14" value="" />            --number(20,6)                         
+                                    <Field name ="inb15" value="" />            --varchar2(10)                         
+                                    <Field name ="inb901" value="" />            --varchar2(20)                         
+                                    <Field name ="inb902" value="" />            --varchar2(4)                          
+                                    <Field name ="inb903" value="" />            --number(20,8)                         
+                                    <Field name ="inb904" value="" />            --number(15,3)                         
+                                    <Field name ="inb905" value="" />            --varchar2(4)                          
+                                    <Field name ="inb906" value="" />            --number(20,8)                         
+                                    <Field name ="inb907" value="" />            --number(15,3)                         
+                                    <Field name ="inb908" value="" />            --number(5)                            
+                                    <Field name ="inb909" value="" />            --number(5)                            
+                                    <Field name ="inb910" value="" />            --varchar2(10)                         
+                                    <Field name ="inb1001" value="" />            --varchar2(10)                         
+                                    <Field name ="inb1002" value="" />            --varchar2(20)                         
+                                    <Field name ="inb1003" value="" />            --number(20,6)                         
+                                    <Field name ="inb1004" value="" />            --varchar2(4)                          
+                                    <Field name ="inb1005" value="" />            --number(15,3)                         
+                                    <Field name ="inb1006" value="" />            --number(20,6)                         
+                                    <Field name ="inb930" value="" />            --varchar2(10)                         
+                                    <Field name ="inb911" value="" />            --varchar2(20)                         
+                                    <Field name ="inb912" value="" />            --number(5)                            
+                                    <Field name ="inb41" value="" />            --varchar2(10)                         
+                                    <Field name ="inb42" value="" />            --varchar2(30)                         
+                                    <Field name ="inb43" value="" />            --varchar2(4)                          
+                                    <Field name ="inbud01" value="" />            --varchar2(255)                        
+                                    <Field name ="inbud02" value="" />            --varchar2(40)                         
+                                    <Field name ="inbud03" value="" />            --varchar2(40)                         
+                                    <Field name ="inbud04" value="" />            --varchar2(40)                         
+                                    <Field name ="inbud05" value="" />            --varchar2(40)                         
+                                    <Field name ="inbud06" value="" />            --varchar2(40)                         
+                                    <Field name ="inbud07" value="" />            --number(15,3)                         
+                                    <Field name ="inbud08" value="" />            --number(15,3)                         
+                                    <Field name ="inbud09" value="" />            --number(15,3)                         
+                                    <Field name ="inbud10" value="" />            --number(10)                           
+                                    <Field name ="inbud11" value="" />            --number(10)                           
+                                    <Field name ="inbud12" value="" />            --number(10)                           
+                                    <Field name ="inbud13" value="" />            --date                                 
+                                    <Field name ="inbud14" value="" />            --date                                 
+                                    <Field name ="inbud15" value="" />            --date                                 
+                                    <Field name ="inb16" value="" />            --number(15,3)                         
+                                    <Field name ="inb922" value="" />            --varchar2(4)                          
+                                    <Field name ="inb923" value="" />            --number(20,8)                         
+                                    <Field name ="inb924" value="" />            --number(15,3)                         
+                                    <Field name ="inb925" value="" />            --varchar2(4)                          
+                                    <Field name ="inb926" value="" />            --number(20,8)                         
+                                    <Field name ="inb927" value="" />            --number(15,3)                         
+                                    <Field name ="inbplant" value="" />            --varchar2(10)                            
+                                    <Field name ="inblegal" value="" />            --varchar2(10)                            
+                                    <Field name ="inb132" value="" />            --number(20,6)                         
+                                    <Field name ="inb133" value="" />            --number(20,6)                         
+                                    <Field name ="inb134" value="" />            --number(20,6)                         
+                                    <Field name ="inb135" value="" />            --number(20,6)                         
+                                    <Field name ="inb136" value="" />            --number(20,6)                         
+                                    <Field name ="inb137" value="" />            --number(20,6)                         
+                                    <Field name ="inb138" value="" />            --number(20,6)                         
+                                    <Field name ="inb46" value="" />            --varchar2(10)                         
+                                    <Field name ="inb47" value="" />            --number(5)                            
+                                    <Field name ="inb44" value="" />            --varchar2(20)                         
+                                    <Field name ="inb45" value="" />            --number(5)                            
+                                    <Field name ="inb48" value="" />            --number(5)                            
+                                    <Field name ="ta_inb01" value="" />            --number(5)                            
+                                    <Field name ="ta_inb02" value="" />            --varchar2(10)                         
+                                    <Field name ="ta_inb03" value="" />            --number(5)
+                                </Record>
+                                <Record>        --如果有第二行，则加第二个Record标签
+                                </Record>
+                            </Detail>
+                        </RecordSet>
+                        <RecordSet id="2" >     --如果有第二单，则加第二个RecordSet标签 id="2" 注意：一个出货单据，作为一个RecordSet
+                            ......
+                        </RecordSet>
+                    </Document>
+                </RequestContent>
+              </Request>]]></tip:request>
+        </tip:zzgxb.aimt370.createRequest>
+    </soapenv:Body>
+</soapenv:Envelope>  
+
+返回结果：              
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Body>
+        <fjs1:zzgxb.aimt370.createResponse xmlns:fjs1="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+            <fjs1:response><![CDATA[<Response>
+                <Execution>
+                    <Status code="-1" sqlcode="" description=""/>
+                </Execution>
+            </Response>]]></fjs1:response>
+      </fjs1:zzgxb.aimt370.createResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+code 0表示成功，非0表示失败
+description 描述
+
+字段        类型            描述
+ina00		varchar2(1)	    单据类型
+ina01		varchar2(20)	单据编号
+ina02		date            扣帐日期
+ina03		date	        录入日期
+ina04		varchar2(10)	部门编号
+ina05		varchar2(1)	    no use
+ina06		varchar2(10)	项目编号
+ina07		varchar2(255)	备注
+ina08		varchar2(1)	    no use
+ina09		varchar2(1)	    no use
+ina10		varchar2(20)	工单编号
+ina100		varchar2(10)	保税异动原因代码
+ina1001		varchar2(10)	客户编号
+ina1002		varchar2(10)	帐款客户
+ina1003		varchar2(10)	送货客户
+ina1004		varchar2(10)	收款客户
+ina1005		varchar2(10)	地址码
+ina1006		varchar2(255)	地址-1
+ina1007		varchar2(255)	地址-2
+ina1008		varchar2(255)	地址-3
+ina1009		varchar2(10)	债权代码
+ina101		varchar2(30)	保税进口报单
+ina1010		varchar2(10)	客户所属组织
+ina1011		varchar2(10)	费用归属组织
+ina1012		varchar2(10)	客户所属通路
+ina1013		date            预计发出日
+ina1014		date            实际发出日
+ina1015		number(15,3) 	重量
+ina1016		number(15,3) 	体积
+ina1017		varchar2(20)	手工单号
+ina1018		varchar2(20)	杂发申请单号
+ina1019		varchar2(15)	非直营业kab
+ina102		date            保税进口报单日期
+ina1020		number(20,6) 	库存异动总金额
+ina1021		varchar2(1)  	已打印提单
+ina1022		varchar2(1)  	导物流状况码
+ina1023		varchar2(4)  	币种
+ina1024		number(20,10) 	汇率
+ina1025		varchar2(1)  	异动类型
+ina103		varchar2(20)  	vmi发/退料单号
+ina11		varchar2(10)  	申请人
+ina12		varchar2(1 		
+ina13		varchar2(20)  	pos单号
+inacond		date            审核日期
+inaconf		varchar2(1)  	确认码
+inacont		varchar2(8)  	审核时间
+inaconu		varchar2(10)  	审核人员
+inadate		date            资料更改者
+inagrup		varchar2(10)  	资料所有群
+inalegal	varchar2(10 	所属法人
+inamksg		varchar2(1)  	签核否
+inamodu		varchar2(10)  	资料更改者
+inaorig		varchar2(10)  	资料建立部门
+inaoriu		varchar2(10)  	资料建立者
+inaplant	varchar2(10 	所属营运中心
+inapos		varchar2(1 		已传pos否
+inapost		varchar2(1)  	过帐码
+inaprsw		number(5) 	 	打印次数
+inaspc		varchar2(1)  	spc抛转码 0/1/2
+inaud01		varchar2(255)  	自订字段-textedit
+inaud02		varchar2(40)  	自订字段-文字
+inaud03		varchar2(40)  	自订字段-文字
+inaud04		varchar2(40)  	自订字段-文字
+inaud05		varchar2(40)  	自订字段-文字
+inaud06		varchar2(40)  	自订字段-文字
+inaud07		number(15,3) 	自订字段-数值
+inaud08		number(15,3) 	自订字段-数值
+inaud09		number(15,3) 	自订字段-数值
+inaud10		number(10) 	    自订字段-整数
+inaud11		number(10) 	    自订字段-整数
+inaud12		number(10) 	    自订字段-整数
+inaud13		date            自订字段-日期
+inaud14		date            自订字段-日期
+inaud15		date            自订字段-日期
+inauser		varchar2(10)  	资料所有者
+ta_ina01	varchar2(255)  	备注二
+ta_ina02	varchar2(10)  	供应商
+ta_ina03	varchar2(1)  	打印性质
+
+
+inb01		varchar2(20)	单据编号
+inb03		number(5) 	    项次
+inb04		varchar2(40)	料号
+inb05		varchar2(10)	仓库
+inb06		varchar2(40)	库位
+inb07		varchar2(24)	批号
+inb08		varchar2(4)	    单位
+inb08_fac	number(20,8) 	异动/库存单位的换算率
+inb09		number(15,3) 	异动数量
+inb10		varchar2(1)	    检验否
+inb1001		varchar2(10)	订价编号
+inb1002		varchar2(20)	提案编号
+inb1003		number(20,6) 	单价(非成本)
+inb1004		varchar2(4)	    计价单位
+inb1005		number(15,3) 	计价数量
+inb1006		number(20,6) 	金额
+inb11		varchar2(20)	来源单号
+inb12		varchar2(20)	参考单号
+inb13		number(20,6) 	单价
+inb132		number(20,6) 	人工单价
+inb133		number(20,6) 	制费一单价
+inb134		number(20,6) 	加工单价
+inb135		number(20,6) 	制费二单价
+inb136		number(20,6) 	制费三单价
+inb137		number(20,6) 	制费四单价
+inb138		number(20,6) 	制费五单价
+inb14		number(20,6) 	金额
+inb15		varchar2(10)	理由码
+inb16		number(15,3) 	申请数量
+inb41		varchar2(10)	项目编号
+inb42		varchar2(30)	wbs编码
+inb43		varchar2(4)	    活动编号
+inb44		varchar2(20)	qc单号
+inb45		number(5) 	    qc项次
+inb46		varchar2(10)	qc判定结果编码
+inb47		number(5) 	    qc判定结果项次
+inb48		number(5) 	    检验批号
+inb901		varchar2(20)	手册编号
+inb902		varchar2(4)	    单位一
+inb903		number(20,8) 	单位一换算率(与库存单位)
+inb904		number(15,3) 	单位一数量
+inb905		varchar2(4)	    单位二
+inb906		number(20,8) 	单位二换算率(与库存单位)
+inb907		number(15,3) 	单位二数量
+inb908		number(5) 	    年度
+inb909		number(5) 	    月份
+inb910		varchar2(10)	成本中心
+inb911		varchar2(20)	保税受托加工订单编号
+inb912		number(5) 	    保税受托加工订单项次
+inb922		varchar2(4)	    申请单位一
+inb923		number(20,8) 	申请单位一换算率
+inb924		number(15,3) 	申请单位一数量
+inb925		varchar2(4)	    申请单位二
+inb926		number(20,8) 	申请单位二换算率
+inb927		number(15,3) 	申请单位二数量
+inb930		varchar2(10)	成本中心
+inblegal	varchar2(10)	所属法人
+inbplant	varchar2(10)	所属营运中心
+inbud01		varchar2(255)	自订字段-textedit
+inbud02		varchar2(40)	自订字段-文字
+inbud03		varchar2(40)	自订字段-文字
+inbud04		varchar2(40)	自订字段-文字
+inbud05		varchar2(40)	自订字段-文字
+inbud06		varchar2(40)	自订字段-文字
+inbud07		number(15,3) 	自订字段-数值
+inbud08		number(15,3) 	自订字段-数值
+inbud09		number(15,3) 	自订字段-数值
+inbud10		number(10) 	    自订字段-整数
+inbud11		number(10) 	    自订字段-整数
+inbud12		number(10) 	    自订字段-整数
+inbud13		date            自订字段-日期
+inbud14		date            自订字段-日期
+inbud15		date            自订字段-日期
+ta_inb01	number(5)       参考单项次
+ta_inb02	varchar2(10)	核算代码
+ta_inb03	number(5)

@@ -12,9 +12,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="alibaba.fastjson" level="project" />
-    <orderEntry type="library" name="Winfxklik" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="kotlinx-coroutines-core" level="project" />
     <orderEntry type="library" name="jsoup" level="project" />
+    <orderEntry type="library" name="io.netty.all" level="application" />
+    <orderEntry type="library" name="Winfxklik" level="project" />
   </component>
 </module>
