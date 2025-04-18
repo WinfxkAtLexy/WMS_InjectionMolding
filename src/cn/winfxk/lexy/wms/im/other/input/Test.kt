@@ -22,25 +22,42 @@ import com.alibaba.fastjson2.JSONObject
 class Test {
 }
 
+val list = hashMapOf(
+    "Y12V9700058" to 192,
+    "Y1D19700005" to 2283,
+    "D9000084166R" to 214,
+    "Y0000101632" to 7,
+    "J001P000027R" to 100,
+    "Y0000102089" to 200,
+    "Y0H10100006" to 1000,
+    "Y1C59700006" to 2175,
+    "Y0000101082" to 135,
+    "J0010001647R" to 600,
+    "Y0000102091" to 200,
+);
+
 fun main() {
-   val result=Storeinput.sendMessage(
+    val result = Storeinput.sendMessage(
         Json("kc04" to "KC04"),
         Json(
-            "ina00" to "3",
+            "ina00" to "1",
             "ina02" to Tool.getDate(),
             "ina03" to Tool.getDate(),
             "ina04" to "1604",
             "ina07" to "备注",
             "ina11" to "kc"
         ),
-        JSONArray(Json(
-            "inb03" to 1,
-            "inb04" to "Q10X0070860",
-            "inb05" to 1334,
-            "inb08" to "PCS",
-            "inb15" to "BMLY",
-            "inb16" to 1,
-        ))
+        JSONArray().also {
+            for ((index, pair) in list.entries.withIndex())
+                it.add(Json(
+                    "inb03" to index + 1,
+                    "inb04" to pair.key,
+                    "inb05" to 1334,
+                    "inb08" to "PCS",
+                    "inb15" to "BMLY",
+                    "inb16" to pair.value,
+                ))
+        }
     );
     println(result.post)
     println(result.xml)

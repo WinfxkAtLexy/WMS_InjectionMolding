@@ -22,7 +22,6 @@ import java.util.*
 import javax.xml.namespace.QName
 import javax.xml.stream.XMLInputFactory
 import javax.xml.stream.XMLStreamException
-import javax.xml.stream.events.Attribute
 import javax.xml.stream.events.StartElement
 
 
@@ -30,13 +29,17 @@ class Result(val xml: String, val post: String?,val error: Throwable? = null,pri
     private var code: String? = null;
     private var sqlCode: String? = null;
     private var description: String? = null;
+    private val docnoMap = HashMap<String, String>()
     fun isSuccess() = "0" == code;
     override fun toString(): String {
-        return "{code: $code, sqlCode: $sqlCode, description: $description}"
+        return "{code: $code, sqlCode: $sqlCode, description: $description, docnoMap: $docnoMap}"
     }
-
+    fun getDescription()=description;
+    fun getDocnoMap()=docnoMap;
+    fun getCode()=code;
+    fun getSqlCode()=sqlCode;
     init {
-        parseResponseXml();
+        parseXml();
         if(!isSuccess()){
             val log = PostLog();
             log.IPC = UUID.randomUUID().toString();
@@ -55,29 +58,39 @@ class Result(val xml: String, val post: String?,val error: Throwable? = null,pri
             log.post()
         }
     }
+
     @Throws(XMLStreamException::class)
-    fun parseResponseXml() {
+    fun parseXml() {
         val factory = XMLInputFactory.newInstance()
         val reader = factory.createXMLEventReader(StringReader(xml))
         while (reader.hasNext()) {
             val event = reader.nextEvent()
             if (event.isStartElement) {
-                val startElement = event.asStartElement()
-                val elementName = startElement.name.localPart
+                val element = event.asStartElement()
+                val elementName = element.name.localPart
+                // 解析状态信息
                 if ("Status" == elementName) {
-                    // 解析属性
-                    this.code = getAttributeValue(startElement, "code")
-                    this.sqlCode = getAttributeValue(startElement, "sqlcode")
-                    this.description = getAttributeValue(startElement, "description")
-                    break // 找到目标后立即退出
+                    this.code = getAttribute(element, "code")
+                    this.sqlCode = getAttribute(element, "sqlcode")
+                    this.description = getAttribute(element, "description")
+                }
+                // 解析文档编号
+                if ("Results" == elementName) {
+                    val recordSet = getAttribute(element, "RecordSet")
+                    val docno = getAttribute(element, "Docno")
+                    if (recordSet != null && docno != null) {
+                        docnoMap[recordSet] = docno
+                    }
                 }
             }
         }
         reader.close()
     }
 
-    private fun getAttributeValue(element: StartElement, attrName: String): String {
-        val attribute: Attribute? = element.getAttributeByName(QName.valueOf(attrName))
-        return if (attribute != null) attribute.value else ""
+    private fun getAttribute(element: StartElement, name: String): String? {
+        val attr = element.getAttributeByName(
+            QName.valueOf(name)
+        )
+        return attr?.value
     }
 }

@@ -36,7 +36,8 @@ class XmlString(private val title: JSONObject, private val json: JSONObject, pri
     private fun getIna(): String {
         var msg = StringBuilder();
         for ((key, value) in json) {
-            if (! key.startsWith("ina", ignoreCase = true)) continue;
+            if (! key.startsWith("imm", ignoreCase = true)
+                && ! key.startsWith("ta_imm", ignoreCase = true)) continue;
             if (msg.isNotBlank()) msg = msg.append("\n")
             msg = msg.append("""
                 <Field name ="$key" value="$value" />
@@ -62,7 +63,8 @@ class XmlString(private val title: JSONObject, private val json: JSONObject, pri
     private fun getInbItem(map: Map<*, *>): String {
         var msg = StringBuilder();
         for ((key, value) in map) {
-            if (! key.toString().startsWith("inb", ignoreCase = true)) continue;
+            if (! key.toString().startsWith("imn", ignoreCase = true)
+                && ! key.toString().startsWith("ta_imn", ignoreCase = true)) continue;
             if (msg.isNotBlank()) msg = msg.append("\n")
             msg = msg.append("""
                 <Field name ="$key" value="$value" />
