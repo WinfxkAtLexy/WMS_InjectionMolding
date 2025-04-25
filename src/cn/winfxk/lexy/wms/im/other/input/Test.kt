@@ -40,22 +40,23 @@ fun main() {
     val result = Storeinput.sendMessage(
         Json("kc04" to "KC04"),
         Json(
-            "ina00" to "1",
-            "ina02" to Tool.getDate(),
-            "ina03" to Tool.getDate(),
-            "ina04" to "1604",
+            "ina00" to "3",
+            "ina02" to Tool.getDate(),//扣账日期 'yyyy-MM-dd'
+            "ina03" to Tool.getDate(),//生成日期 'yyyy-MM-dd'
+            "ina04" to "1604",//部门编号
             "ina07" to "备注",
-            "ina11" to "kc"
+            "ina11" to "kc"//操作人
         ),
         JSONArray().also {
             for ((index, pair) in list.entries.withIndex())
                 it.add(Json(
-                    "inb03" to index + 1,
-                    "inb04" to pair.key,
-                    "inb05" to 1334,
-                    "inb08" to "PCS",
-                    "inb15" to "BMLY",
-                    "inb16" to pair.value,
+                    "inb03" to index + 1,//想吃
+                    "inb04" to pair.key,//料号
+                    "inb05" to 1334,//仓库
+               /*     "inb06" to "M",//库位*/
+                    "inb08" to "PCS",//单位
+                    "inb15" to "BMLY",//理由码
+                    "inb16" to pair.value,//数量
                 ))
         }
     );

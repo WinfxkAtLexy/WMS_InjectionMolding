@@ -91,12 +91,12 @@ class XmlString(private val title: JSONObject, private val json: JSONObject, pri
                                 </Parameter>
                                 <Document>
                                     <RecordSet id="1" >
-                                        <Master name="ina_file">
+                                        <Master name="imm_file">
                                             <Record>
                                                 ${getIna()}
                                             </Record>
                                         </Master>
-                                        <Detail name="inb_file">
+                                        <Detail name="imn_file">
                                             ${getInb()}
                                         </Detail>
                                     </RecordSet>

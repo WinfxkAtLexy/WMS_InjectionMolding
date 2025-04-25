@@ -1,0 +1,71 @@
+<Request>
+    <Access>
+        <Authentication user="" password=""/>
+        <Connection application="" source=""/>
+        <Organization name="null"/>
+        --填ERP的法人编号 例如 KC04
+        <Locale language="zh_cn"/>
+        --language="zh_cn"
+    </Access>
+    <RequestContent>
+        <Parameter>
+            <Record>
+                <Field name="reqno" value="ccLOWWC-nnzP"/>
+                --请求编号
+                <Field name="reqtime" value="2025-04-21 08:42:14"/>
+                --请求时间 yyyy-MM-dd HH:mm:ss
+                <Field name="reqclient" value="zzgxb"/>
+                --请求来源 固定值 "zzgxb"
+                <Field name="reqtype" value="0"/>
+                --类型 固定值 '0'
+            </Record>
+        </Parameter>
+        <Document>
+            <RecordSet id="1">
+                <Master name="ina_file">
+                    <Record>
+                        <Field name="imm02" value="2025-04-21 08:42:14"/>
+                        <Field name="imm14" value="1604"/>
+                        <Field name="imm16" value="kc"/>
+                    </Record>
+                </Master>
+                <Detail name="inb_file">
+
+                    <Record>
+                        <Field name="imn02" value="1"/>
+                        <Field name="imn03" value="Y12V9700058"/>
+                        <Field name="imn04" value="1334"/>
+                        <Field name="imn09" value="PCS"/>
+                        <Field name="imn10" value="1"/>
+                        <Field name="imn15" value="1013"/>
+                        <Field name="imn16" value="M"/>
+                        <Field name="imn20" value="PCS"/>
+                        <Field name="imn22" value="1"/>
+                    </Record>
+
+                </Detail>
+            </RecordSet>
+        </Document>
+    </RequestContent>
+</Request>
+
+
+
+
+
+
+
+
+
+
+
+
+<Response>
+<Execution>
+    <Status code="-1" sqlcode="100" description="Access validate fail!"/>
+</Execution>
+<ResponseContent>
+    <Parameter/>
+    <Document/>
+</ResponseContent>
+</Response>

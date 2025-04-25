@@ -58,7 +58,6 @@ class InputItem {
             val sfv05 = json["sfv05"];
             if (sfv05.isNotExist()) return getErrorMessage("字段[sfv05]不能为空！")
             val sfv06 = json["sfv06"];
-            if (sfv06.isNotExist()) return getErrorMessage("字段[sfv06]不能为空！")
             val sfv08 = json["sfv08"];
             if (sfv08.isNotExist()) return getErrorMessage("字段[sfv08]不能为空！")
             val sfv09 = json["sfv09"];

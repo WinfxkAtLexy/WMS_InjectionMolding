@@ -15,8 +15,8 @@
 * Created Date: 2025/4/15  08:00 */
 package cn.winfxk.lexy.wms.im.other.input
 
-import cn.winfxk.lexy.wms.im.client.test.CwsAimt370CreateRequestCwsAimt370CreateRequest
-import cn.winfxk.lexy.wms.im.client.test.TIPTOPServiceGateWay
+import cn.winfxk.lexy.wms.im.client.release.CwsAimt370CreateRequestCwsAimt370CreateRequest
+import cn.winfxk.lexy.wms.im.client.release.TIPTOPServiceGateWay
 import cn.winfxk.libk.log.Log
 import cn.winfxk.libk.tool.utils.toArray
 import cn.winfxk.libk.tool.utils.toJson

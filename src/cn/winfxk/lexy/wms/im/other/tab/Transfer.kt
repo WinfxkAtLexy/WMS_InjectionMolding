@@ -15,8 +15,9 @@
 * Created Date: 2025/4/15  08:00 */
 package cn.winfxk.lexy.wms.im.other.tab
 
-import cn.winfxk.lexy.wms.im.client.test.CwsAimt324CreateRequestCwsAimt324CreateRequest
-import cn.winfxk.lexy.wms.im.client.test.TIPTOPServiceGateWay
+import cn.winfxk.lexy.wms.im.client.release.CwsAimt324CreateRequestCwsAimt324CreateRequest
+import cn.winfxk.lexy.wms.im.client.release.TIPTOPServiceGateWay
+import cn.winfxk.lexy.wms.im.other.input.Result
 import cn.winfxk.libk.log.Log
 import cn.winfxk.libk.tool.utils.toArray
 import cn.winfxk.libk.tool.utils.toJson
@@ -34,22 +35,34 @@ class Transfer private constructor(private val title: JSONObject, private val js
      *开始处理请求
      */
     private fun start(): Result {
-        log.i("创建请求端口..")
         val xml = XmlString(title, json, array).getXml();
-        val post = port.cwsAimt324Create(CwsAimt324CreateRequestCwsAimt324CreateRequest().apply {
-            log.i("设置请求")
-            request = xml
-        })
-        if (post == null) log.e("请求失败！")
-        val response = post.response;
-        if (response.isNullOrBlank()) log.e("返回的数据为空！")
-        return response.let {
-            log.i("正在处理结果..")
-            val result = Result(it, xml)
-            log.i("请求完毕!");
-            result;
+        try {
+            log.i("创建请求端口..")
+            val post = port.cwsAimt324Create(CwsAimt324CreateRequestCwsAimt324CreateRequest().apply {
+                log.i("设置请求")
+                request = xml
+            })
+            if (post == null) log.e("请求失败！")
+            val response = post.response;
+            if (response.isNullOrBlank()) log.e("返回的数据为空！")
+            return response.let {
+                log.i("正在处理结果..")
+                val result = Result(it, xml, null, json)
+                log.i("请求完毕!");
+                result;
+            }
+        } catch (e: Exception) {
+            return error(e.message ?: "未知错误", xml, e)
         }
     }
+
+    private fun error(msg: String, xml: String?, e: Throwable) = Result("""
+        <Response>
+                <Execution>
+                    <Status code="-1" sqlcode="" description="$msg"/>
+                </Execution>
+            </Response>
+    """.trimIndent(), xml, e, json)
 
     companion object {
         private val log = Log(Transfer::class.java.simpleName)
