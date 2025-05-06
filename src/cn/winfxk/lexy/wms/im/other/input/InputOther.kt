@@ -47,5 +47,16 @@ class InputOther {
          */
         @JvmStatic
         fun sendMessage(title: JSONObject, json: JSONObject, array: JSONArray) = Storeinput.sendMessage(title, json.apply { this["ina00"] = 3 }, array)
+        @JvmStatic
+        fun sendMessage(sb: com.alibaba.fastjson.JSONObject): Result {
+            val acc = sb["acc"];
+            val title = JSONObject();
+            val array = JSONObject()
+            sb.forEach { (k, v) ->
+                if (k.startsWith("ina", ignoreCase = true) || k.startsWith("ta_ina", ignoreCase = true)) title[k] = v;
+                if (k.startsWith("inb", ignoreCase = true) || k.startsWith("ta_inb", ignoreCase = true)) array[k] = v;
+            }
+            return sendMessage(Json("kc04" to acc), title, JSONArray().also { it.add(array) })
+        }
     }
 }

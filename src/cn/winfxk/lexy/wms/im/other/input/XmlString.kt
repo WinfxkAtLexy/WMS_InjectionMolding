@@ -27,7 +27,7 @@ class XmlString(private val title: JSONObject, private val json: JSONObject, pri
     private fun getAccess(): String = """
                                 <Authentication user="" password=""/>
                                 <Connection application="" source=""/>          
-                                <Organization name="${title["kc04"]}"/>                     --填ERP的法人编号 例如 KC04
+                                <Organization name="${title["kc04"]?:title["acc"]?:title["KC04"]}"/>                     --填ERP的法人编号 例如 KC04
                                 <Locale language="zh_cn"/>                      --language="zh_cn"
     """.trimIndent()
     /**

@@ -17,6 +17,7 @@ package cn.winfxk.lexy.wms.im.other.tab
 
 import cn.winfxk.lexy.wms.im.client.release.CwsAimt324CreateRequestCwsAimt324CreateRequest
 import cn.winfxk.lexy.wms.im.client.release.TIPTOPServiceGateWay
+import cn.winfxk.lexy.wms.im.other.input.Json
 import cn.winfxk.lexy.wms.im.other.input.Result
 import cn.winfxk.libk.log.Log
 import cn.winfxk.libk.tool.utils.toArray
@@ -87,6 +88,17 @@ class Transfer private constructor(private val title: JSONObject, private val js
         fun sendMessage(title: com.alibaba.fastjson.JSONObject, json: com.alibaba.fastjson.JSONObject, array: com.alibaba.fastjson.JSONArray): Result {
             log.i("接收到Fastjson1数据，转换为Fastjson2进行处理")
             return sendMessage(JSONObject(title), JSONObject(json), JSONArray(array));
+        }
+        @JvmStatic
+        fun sendMessage(sb: com.alibaba.fastjson.JSONObject): Result {
+            val acc = sb["acc"];
+            val title = JSONObject();
+            val array = JSONObject()
+            sb.forEach { (k, v) ->
+                if (k.startsWith("imm", ignoreCase = true) || k.startsWith("ta_imm", ignoreCase = true)) title[k] = v;
+                if (k.startsWith("imn", ignoreCase = true) || k.startsWith("ta_imn", ignoreCase = true)) array[k] = v;
+            }
+            return sendMessage(Json("kc04" to acc), title, JSONArray().also { it.add(array) })
         }
         /**
          * 处理杂收请求

@@ -20,7 +20,7 @@ import com.alibaba.fastjson.JSONArray
 import com.alibaba.fastjson.JSONObject
 
 fun main() {
-  val a=  Transfer.sendMessage(JSONObject(mapOf(
+  val result=  Transfer.sendMessage(JSONObject(mapOf(
         "kc04" to "KC04"
     )), JSONObject(mapOf(
         "imm02" to Tool.getDate(),//操作时间
@@ -38,7 +38,4 @@ fun main() {
         "imn20" to "PCS",//接收端单位
         "imn22" to 1,//接收端数量
     ))))
-    println(a.post)
-    println(a.xml)
-    println(a)
 }

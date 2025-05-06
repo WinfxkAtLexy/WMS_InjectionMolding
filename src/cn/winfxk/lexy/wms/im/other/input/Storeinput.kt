@@ -29,14 +29,13 @@ import com.alibaba.fastjson2.JSONObject
 class Storeinput private constructor(private val title: JSONObject, private val json: JSONObject, private val array: JSONArray) {
     init {
         log.i("正在初始化数据...")
-
     }
     /**
      *开始处理请求
      */
     private fun start(): Result {
         val xml = XmlString(title, json, array).getXml();
-        try{
+        try {
             log.i("创建请求端口..")
             val post = port.cwsAimt370Create(CwsAimt370CreateRequestCwsAimt370CreateRequest().apply {
                 log.i("设置请求")
@@ -51,17 +50,19 @@ class Storeinput private constructor(private val title: JSONObject, private val 
                 log.i("请求完毕!");
                 result;
             }
-        }catch (e:Exception){
-            return error(e.message?:"未知错误",xml,e)
+        } catch (e: Exception) {
+            return error(e.message ?: "未知错误", xml, e)
         }
     }
-    private fun error(msg:String,xml:String?,e:Throwable)= Result("""
+
+    private fun error(msg: String, xml: String?, e: Throwable) = Result("""
         <Response>
                 <Execution>
                     <Status code="-1" sqlcode="" description="$msg"/>
                 </Execution>
             </Response>
     """.trimIndent(), xml, e, json)
+
     companion object {
         private val log = Log(Storeinput::class.java.simpleName)
         private val service = TIPTOPServiceGateWay();
