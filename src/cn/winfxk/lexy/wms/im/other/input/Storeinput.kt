@@ -15,8 +15,8 @@
 * Created Date: 2025/4/15  08:00 */
 package cn.winfxk.lexy.wms.im.other.input
 
-import cn.winfxk.lexy.wms.im.client.release.CwsAimt370CreateRequestCwsAimt370CreateRequest
-import cn.winfxk.lexy.wms.im.client.release.TIPTOPServiceGateWay
+import cn.winfxk.lexy.wms.im.client.test.CwsAimt370CreateRequestCwsAimt370CreateRequest
+import cn.winfxk.lexy.wms.im.client.test.TIPTOPServiceGateWay
 import cn.winfxk.libk.log.Log
 import cn.winfxk.libk.tool.utils.toArray
 import cn.winfxk.libk.tool.utils.toJson
@@ -28,7 +28,7 @@ import com.alibaba.fastjson2.JSONObject
  */
 class Storeinput private constructor(private val title: JSONObject, private val json: JSONObject, private val array: JSONArray) {
     init {
-        log.i("正在初始化数据...")
+        log.i(  "正在初始化数据...")
     }
     /**
      *开始处理请求

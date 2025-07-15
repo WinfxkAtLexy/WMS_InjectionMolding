@@ -60,3 +60,9 @@ class InputOther {
         }
     }
 }
+
+fun main() {
+    val t = "{\"acc\":\"KC04\",\"ina03\":\"2025-05-10\",\"ina02\":\"2025-05-10\",\"ina00\":\"3\",\"ina11\":\"kc08237\",\"ina07\":\" \",\"ina04\":\"1604\"}".toJson();
+    val rs = InputOther.sendMessage(t, t, "[{\"inb06\":\" \",\"inb05\":\"1334\",\"inb16\":\"100\",\"inb04\":\"S0MFF850B11\",\"inb15\":\"CLTZ\",\"inb03\":1,\"ipc\":\"1604_13343_20250510135308\",\"inb08\":\"PCS\"}]".toArray())
+    println(rs)
+}

@@ -1,0 +1,51 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:tip="http://www.dsc.com.tw/tiptop/TIPTOPServiceGateWay">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tip:cws.cecp980.createRequest>
+            <tip:request><![CDATA[
+<Request>
+    <Access>
+        <Authentication user="" password=""/>
+        <Connection application="" source=""/>
+        <Organization name="KC04"/>                     --填ERP的当前法人编号 例如 KC04
+        <Locale language="zh_cn"/>                      --language="zh_cn"
+    </Access>
+    <RequestContent>
+        <Parameter>
+            <Record>
+                <Field name ="reqno" value="12345678" />                --请求编号   VARCHAR2(20)
+                <Field name ="reqtime" value="2025-06-17 9:37:51" />    --请求时间   yyyy-MM-dd HH:mm:ss
+                <Field name ="reqclient" value="" />                    --请求来源   固定值 自己系统的代号
+                <Field name ="reqtype" value="0" />                     --类型       固定值 '0'
+            </Record>
+        </Parameter>
+        <Document>
+            <RecordSet id="1" >
+                <Master name="header">
+                    <Record>
+                        <Field name ="tc_wsg01" value="61500-250500608" />  --varchar2(20) 源工单  
+                        <Field name ="tc_wsg02" value="61500-250500655" />  --varchar2(20) 当前工单
+                        <Field name ="tc_wsg03" value="1" />                --类型: 1发料 2成品入库 3退料
+                        <Field name ="tc_wsg04" value="kcl3360" />          --人员
+                        <Field name ="tc_wsg05" value="6000" />             --部门
+                        <Field name ="tc_wsg06" value="KC04" />             --当前法人
+                    </Record>
+                </Master>
+                <Detail name="body">
+                    <Record>
+                        <Field name ="tc_wsg11" value="SEA03801D13R" />     --varchar2(40)       料号   
+                        <Field name ="tc_wsg12" value="2034" />             --varchar2(10)       仓库                        
+                        <Field name ="tc_wsg13" value="" />                 --varchar2(10)       储位        
+                        <Field name ="tc_wsg14" value="" />                 --varchar2(40)       批号
+                        <Field name ="tc_wsg15" value="PCS" />              --varchar2(10)       单位
+                        <Field name ="tc_wsg16" value="1" />                --number(15,3)       数量
+                    </Record>
+                </Detail>
+            </RecordSet>
+        </Document>
+    </RequestContent>
+</Request>]]></tip:request>
+        </tip:cws.cecp980.createRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
