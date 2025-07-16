@@ -1,0 +1,9 @@
+<Response>
+  <Execution>
+    <Status code="-1" sqlcode="0" description="第1单,出货数量不可大於库存可用数量!"/>
+  </Execution>
+  <ResponseContent>
+    <Parameter/>
+    <Document/>
+  </ResponseContent>
+</Response>

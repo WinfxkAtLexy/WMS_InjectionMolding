@@ -1,0 +1,9 @@
+<Response>
+  <Execution>
+    <Status code="-1" sqlcode="0" description="第1单,此订单单身所有项次都已经结案"/>
+  </Execution>
+  <ResponseContent>
+    <Parameter/>
+    <Document/>
+  </ResponseContent>
+</Response>
