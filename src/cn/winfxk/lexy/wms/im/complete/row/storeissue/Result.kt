@@ -37,7 +37,8 @@ class Result(private val main: Rowstoreissue, val response: String?, val throwab
 
     @Throws(XMLStreamException::class)
     fun parseXml() {
-        val response = response ?: """
+        val factory = XMLInputFactory.newInstance()
+        val reader = factory.createXMLEventReader(StringReader(response ?: """
             <Response>
                 <Execution>
                     <Status code="-1" sqlcode="-1" description="${throwable?.message ?: "未知原因"}"/>
@@ -47,21 +48,17 @@ class Result(private val main: Rowstoreissue, val response: String?, val throwab
                     <Document/>
                 </ResponseContent>
             </Response>
-        """.trimIndent()
-        val factory = XMLInputFactory.newInstance()
-        val reader = factory.createXMLEventReader(StringReader(response))
+        """.trimIndent()))
         while (reader.hasNext()) {
             val event = reader.nextEvent()
             if (event.isStartElement) {
                 val element = event.asStartElement()
                 val elementName = element.name.localPart
-                // 解析状态信息
                 if ("Status" == elementName) {
                     this.code = getAttribute(element, "code")
                     this.sqlCode = getAttribute(element, "sqlcode")
                     this.message = getAttribute(element, "description")
                 }
-                // 解析文档编号
                 if ("Results" == elementName) {
                     val recordSet = getAttribute(element, "RecordSet")
                     val docno = getAttribute(element, "Docno")

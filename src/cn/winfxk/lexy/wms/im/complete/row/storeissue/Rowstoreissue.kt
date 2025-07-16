@@ -171,7 +171,22 @@ class Rowstoreissue(
             port.cwsCecp980Create(CwsCecp980CreateRequestCwsCecp980CreateRequest().apply {
                 this.request = xml;
             }).apply {
-                return Result(this@Rowstoreissue, response)
+                return Result(this@Rowstoreissue, response).apply {
+                    if (isSuccess) return@apply;
+                    val log = PostLog();
+                    log.IPC = UUID.randomUUID().toString();
+                    log.SYS_C = "WMS";
+                    log.ITEM_C = "注塑发货";
+                    log.ITEM_N = "注塑件收货";
+                    log.STATE = "NG";
+                    log.CONTEXT = xml;
+                    log.RESULT = response;
+                    log.MARK = description;
+                    log.CNAME = tc_wsg04
+                    log.FAC_C = tc_wsg05;
+                    log.MCODE = "1001";
+                    log.post()
+                }
             }
         } catch (e: Exception) {
             log.e("请求ERP时出现异常！", e);
