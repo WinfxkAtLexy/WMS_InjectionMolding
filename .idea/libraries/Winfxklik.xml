@@ -7,6 +7,9 @@
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../Winfxk/Winfxklik" />
       <root url="file://$PROJECT_DIR$/../../Winfxk/Winfxklik/src" />
+      <root url="file://$PROJECT_DIR$/../../Winfxk/Winfxklik/src" />
+      <root url="file://$PROJECT_DIR$/../../Winfxk/Winfxklik/src" />
+      <root url="file://$PROJECT_DIR$/../../Winfxk/Winfxklik/src" />
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/../../Winfxk/Winfxklik" recursive="false" />
   </library>
